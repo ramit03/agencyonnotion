@@ -64,7 +64,9 @@ module.exports = {
       },
       fontFamily:{
         helvetica: ['var(--font-helvetica)', 'sans'],   
-        neue: ['var(--font-neue)', 'sans'],   
+        neue: ['var(--font-neue)', 'sans'],  
+        helvetica_light:[ 'var(--font-helvatica_light)', 'sans' ],
+        neue_obl:['var(--font-neue_obl)','sans'],
       },
       borderRadius: {
         lg: "var(--radius)",

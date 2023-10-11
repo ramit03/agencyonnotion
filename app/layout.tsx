@@ -1,7 +1,8 @@
-import Header from '@/components/Header'
+import Header from '@/components/common/Header'
 import './globals.css'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import Footer from '@/components/common/Footer'
 
 const helvetica = localFont({
   src: [
@@ -11,12 +12,29 @@ const helvetica = localFont({
       style:'normal'
     },
     {
+      path:'../public/fonts/Helvetica-Oblique.ttf',
+      weight: '400',
+      style: "normal",
+    },
+    {
       path:'../public/fonts/Helvetica-Bold.ttf',
       weight: '700',
       style: "normal",
     },
+    
   ],
   variable: '--font-helvatica'
+})
+
+const helvetica_light = localFont({
+  src:[
+    {
+      path:'../public/fonts/Helvetica-lightt.ttf',
+      weight: '100',
+      style: "normal",
+    },
+  ],
+  variable: '--font-helvatica_light'
 })
 
 const neue = localFont({
@@ -27,12 +45,22 @@ const neue = localFont({
       style:'normal'
     },
     {
-      path:'../public/fonts/Helvetica-Neue.ttf',
-      weight:'700',
+      path:'../public/fonts/HelveticaNeue-Obl.ttf',
+      weight:'400',
       style:'normal'
     }
   ],
   variable:'--font-neue'
+})
+const neue_obl = localFont({
+  src: [
+    {
+      path:'../public/fonts/HelveticaNeue-Obl.ttf',
+      weight:'200',
+      style:'normal'
+    }
+  ],
+  variable:'--font-neue_obl'
 })
 
 export const metadata: Metadata = {
@@ -50,6 +78,7 @@ export default function RootLayout({
       <body className={`${helvetica.className} bg-white`}>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   )
