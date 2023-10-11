@@ -78,7 +78,7 @@
 @layer components{
 
   .topbar{
-    @apply fixed top-0 z-30 flex w-full items-center justify-center text-2xl bg-white py-12;
+    @apply fixed top-0 z-30 flex w-full items-center justify-center text-2xl bg-white md:py-12 py-8;
   
   }
   .bottombar {
