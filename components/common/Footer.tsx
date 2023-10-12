@@ -5,11 +5,11 @@ function Footer() {
   return (
     <section
       id="footer"
-      className="bottombar flex flex-col items-start lg:py-28 md:p-24 py-20 gap-y-8 lg:px-32 md:px-24 px-20"
+      className="bottombar flex flex-col items-start lg:py-28 md:py-24 py-20 md:gap-8 gap-4 lg:px-32 md:px-20 px-16"
     >
-      <h1 className="font-neue lg:text-[40px] md:text-[36px] text-[24px]">About Redendron Media</h1>
-      <div className="flex md:flex-row gap-y-20 md:gap-y-0 flex-col justify-between ">
-        <div className="flex flex-col lg:w-[40%] md:w-1/2 w-full lg:text-[24px] md:text-[20px] text-[16px] gap-y-6">
+      <h1 className="font-neue lg:text-[40px] md:text-[32px] text-[24px]">About Redendron Media</h1>
+      <div className="flex md:flex-row justify-between gap-20 flex-col">
+        <div className="flex flex-col lg:w-[40%] md:w-1/2 w-full lg:text-[24px] md:text-[16px] text-[16px] gap-y-4">
           <p>
             We're an agency passionate about the digital domain. Our mission is
             to provide insights and tools that help businesses thrive.
@@ -19,7 +19,7 @@ function Footer() {
             path to success.
           </p>
         </div>
-        <div className="flex flex-col font-light text-[16px] lg:text-[24px] md:text-[20px]  lg:w-[20%] md:w-1/2 w-full gap-y-8">
+        <div className="flex flex-col font-light text-[16px] lg:text-[24px] md:text-[20px]  lg:w-[40%] md:w-1/2 w-full gap-y-8">
           <div className="flex flex-row items-center gap-2">
             <Image
               className="footer_icon"
@@ -29,7 +29,7 @@ function Footer() {
               height={38}
             />
             <Link
-              className="hover:text-[#C11B17]"
+              className="hover:text-[#C11B17] font-neue font-light"
               href={"https://www.redendron.media/"}
             >
               redendron.media
@@ -44,7 +44,7 @@ function Footer() {
               height={38}
             />
             <Link
-              className="hover:text-[#C11B17]"
+              className="hover:text-[#C11B17]  font-neue font-light"
               href={"https://www.redendron.media/"}
             >
               +91 90645 38311
@@ -59,14 +59,13 @@ function Footer() {
               height={38}
             />
             <Link
-              className="hover:text-[#C11B17]"
+              className="hover:text-[#C11B17] font-neue font-extralight"
               href={"https://www.redendron.media/"}
             >
               team@redendron.com
             </Link>
           </div>
         </div>
-        <div></div>
       </div>
     </section>
   );
