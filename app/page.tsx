@@ -34,7 +34,7 @@ export default function Home() {
           height={580}
         />
       </section>
-      <section className="flex flex-col items-start md:my-36 my-24 gap-6 md:gap-16 lg:px-32 md:px-20 px-14">
+      <section className="flex flex-col items-start md:my-36 mt-24 mb-12 gap-6 md:gap-16 lg:px-32 md:px-20 px-14">
         <h1 className="header lg:w-[55%] w-full">
           In this free masterclass, you will learn
         </h1>
