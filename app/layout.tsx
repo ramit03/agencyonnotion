@@ -75,7 +75,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${helvetica.variable}  font-sans`}>
-      <body className={`${helvetica.className} bg-white`}>
+      <body className={`${helvetica.className}`}>
         <Header/>
         {children}
         <Footer/>

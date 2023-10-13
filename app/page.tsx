@@ -7,7 +7,7 @@ import { instructorLinks } from "@/constants";
 export default function Home() {
   const targetDate = new Date("2023-10-28T16:00:00");
   return (
-    <main className="flex min-h-screen flex-col w-screen items-center justify-center">
+    <main className="flex min-h-screen flex-col w-full items-center justify-center">
       <section className="flex flex-col md:gap-y-16 gap-4 items-center py-24 lg:px-32 md:px-20 px-14">
         <h1 className="justify-center text-center header lg:mt-[100px]  md:mt-[50px] mt-[12px]">
           How to run your agency on Notion
@@ -115,14 +115,14 @@ export default function Home() {
           height={680}
         />
       </section>
-      <section className="flex flex-col items-center lg:gap-24 gap-8 md:py-48 py-32 lg:px-36 md:px-16 px-8">
+      <section className="flex flex-col items-center lg:gap-24 gap-8 md:py-48 py-32 lg:px-96 md:px-16 px-8">
         <h1 className="header lg:text-[64px] md:text-[48px] text-[32px]">
           Our Instructors
         </h1>
-        <div className="flex lg:flex-row flex-col items-center justify-center gap-8">
+        <div className="flex lg:flex-row flex-col items-center justify-center gap-12">
           {instructorLinks.map((link) => {
             return (
-              <div className="flex items-center h-full shadow-lg lg:w-[40%] md:w-[80%] w-[95%] flex-col md:gap-11 gap-6 py-16 md:px-[45px] px-[30px] text-center rounded-[57px]">
+              <article className="flex items-center flex-grow shadow-lg  lg:w-[40%] md:w-[80%] w-[95%] flex-col md:gap-11 gap-6 py-16 md:px-[45px] px-[30px] text-center rounded-[57px]">
                 <Image
                   src={link.imgURL}
                   width={210}
@@ -140,7 +140,7 @@ export default function Home() {
                 <p className="md:text-[28px] text-[18px] font-helvetica_light">
                   {link.desc}
                 </p>
-              </div>
+              </article>
             );
           })}
         </div>
@@ -150,7 +150,7 @@ export default function Home() {
           Discover the transformative power of Notion in our exclusive
           masterclass.
         </h1>
-        <p className="lg:px-16 md:px-8 text-center leading-[36px] subheader">
+        <p className="lg:px-16 md:px-8 text-center  subheader">
           Dive into streamlined strategies, innovative tools, and actionable
           insights tailored for agency growth. Elevate your operations, foster
           collaboration, and scale effortlessly.{" "}
