@@ -40,10 +40,10 @@ export default function Home() {
         </h1>
         <div className="flex lg:flex-row flex-col  lg:justify-between w-full lg:items-end md:items-end items-center">
           <div className="lg:w-1/2 w-full">
-            <ol className="flex subheader flex-col lg:px-6 md:px-8 gap-y-8 font-thin ">
+            <ol className="flex subheader flex-col lg:px-0 md:px-6 gap-y-8 font-thin ">
               {learningList.map((text) => (
                 <li key={text.id}>
-                  <div className="flex gap-4 items-start">
+                  <div className="flex gap-2 md:gap-6 items-start">
                     <Image
                       src={"/icons/check-mark.png"}
                       width={24}
@@ -51,7 +51,7 @@ export default function Home() {
                       alt="check"
                       className="lg:w-6 lg:h-6 mt-3 w-5 h-5"
                     />
-                    <p className="">{text.text}</p>
+                    <p className="md:leading-10 leading-9">{text.text}</p>
                   </div>
                 </li>
               ))}
@@ -108,7 +108,7 @@ export default function Home() {
         <div className="flex lg:flex-row flex-col items-center justify-center gap-12">
           {instructorLinks.map((link) => {
             return (
-              <article className="flex items-center lg:min-h-[900px] flex-grow shadow-lg  lg:w-[40%] md:w-[80%] w-[95%] flex-col md:gap-11 gap-6 py-16 md:px-[45px] px-[30px] text-center rounded-[57px]">
+              <article className="flex items-center lg:min-h-[900px] flex-grow shadow-xl  lg:w-[40%] md:w-[80%] w-[95%] flex-col md:gap-11 gap-6 py-16 md:px-[45px] px-[30px] text-center rounded-[57px]">
                 <Image
                   src={link.imgURL}
                   width={210}
