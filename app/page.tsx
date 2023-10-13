@@ -2,7 +2,7 @@
 import SaveSeat from "@/components/forms/SaveSeat";
 import Image from "next/image";
 import Countdown from "react-countdown";
-import { instructorLinks,learningList } from "@/constants";
+import { instructorLinks, learningList } from "@/constants";
 
 export default function Home() {
   const targetDate = new Date("2023-10-28T16:00:00");
@@ -40,13 +40,18 @@ export default function Home() {
         </h1>
         <div className="flex lg:flex-row flex-col  lg:justify-between w-full lg:items-end md:items-end items-center">
           <div className="lg:w-1/2 w-full">
-              
             <ol className="flex subheader flex-col lg:px-6 md:px-8 gap-y-8 font-thin ">
-              {learningList.map((text) =>(
-                <li key={text.id} >
+              {learningList.map((text) => (
+                <li key={text.id}>
                   <div className="flex gap-4 items-start">
-                  <Image src={'/icons/check-mark.png'} width={24} height={24} alt="check" className="lg:w-6 lg:h-6 mt-3 w-5 h-5"/>
-                  <p className="">{text.text}</p>
+                    <Image
+                      src={"/icons/check-mark.png"}
+                      width={24}
+                      height={24}
+                      alt="check"
+                      className="lg:w-6 lg:h-6 mt-3 w-5 h-5"
+                    />
+                    <p className="">{text.text}</p>
                   </div>
                 </li>
               ))}
@@ -54,7 +59,7 @@ export default function Home() {
           </div>
           <div className="md:w-1/2 w-full flex lg:justify-start">
             <Image
-              className="w-full lg:h-[600px] md:h-[400px] lg:mt-0 md:mt-[-40px] mt-4"
+              className="w-full lg:h-[600px] md:h-[400px] lg:mt-0 md:mt-[-20px] mt-4"
               src={"/images/oc-growing.svg"}
               alt={"agency"}
               width={600}
@@ -65,7 +70,9 @@ export default function Home() {
       </section>
       <section className="flex flex-col text-center lg:px-64 md:px-24 px-14 md:gap-12 gap-6 items-center">
         <h1 className="header">Join us live on Friday, 28th October</h1>
-        <h3 className="subheader font-normal">4 - 6 PM IST, FREE ONLINE MASTERCLASS</h3>
+        <h3 className="subheader font-normal">
+          4 - 6 PM IST, FREE ONLINE MASTERCLASS
+        </h3>
         <Countdown
           date={targetDate}
           renderer={({ days, hours, minutes, seconds }) => (
@@ -101,7 +108,7 @@ export default function Home() {
         <div className="flex lg:flex-row flex-col items-center justify-center gap-12">
           {instructorLinks.map((link) => {
             return (
-              <article className="flex items-center lg:min-h-[1111px] flex-grow shadow-lg  lg:w-[40%] md:w-[80%] w-[95%] flex-col md:gap-11 gap-6 py-16 md:px-[45px] px-[30px] text-center rounded-[57px]">
+              <article className="flex items-center lg:min-h-[1000px] flex-grow shadow-lg  lg:w-[40%] md:w-[80%] w-[95%] flex-col md:gap-11 gap-6 py-16 md:px-[45px] px-[30px] text-center rounded-[57px]">
                 <Image
                   src={link.imgURL}
                   width={210}
