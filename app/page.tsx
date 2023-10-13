@@ -2,7 +2,7 @@
 import SaveSeat from "@/components/forms/SaveSeat";
 import Image from "next/image";
 import Countdown from "react-countdown";
-import { instructorLinks } from "@/constants";
+import { instructorLinks,learningList } from "@/constants";
 
 export default function Home() {
   const targetDate = new Date("2023-10-28T16:00:00");
@@ -40,37 +40,16 @@ export default function Home() {
         </h1>
         <div className="flex lg:flex-row flex-col  lg:justify-between w-full lg:items-end md:items-end items-center">
           <div className="lg:w-1/2 w-full">
-            <ol
-              start={1}
-              className="flex subheader flex-col lg:px-6 md:px-8 gap-y-8 font-thin "
-            >
-              <li>
-                Framework to create an agency blueprint on Notion without
-                unnecessary complexity.
-              </li>
-
-              <li>
-                Why Notion is the perfect software to manage your scaling agency
-                business.
-              </li>
-
-              <li>
-                {" "}
-                A new project management philosophy for the ever-changing
-                digital landscape.
-              </li>
-
-              <li>
-                {" "}
-                How building an agency second brain creates serendipitous
-                opportunities.
-              </li>
-
-              <li>
-                {" "}
-                How to collaborate with your team, clients and freelancers
-                effectively on Notion
-              </li>
+              
+            <ol className="flex subheader flex-col lg:px-6 md:px-8 gap-y-8 font-thin ">
+              {learningList.map((text) =>(
+                <li key={text.id} >
+                  <div className="flex gap-4 items-start">
+                  <Image src={'/icons/check-mark.png'} width={24} height={24} alt="check" className="lg:w-6 lg:h-6 mt-3 w-5 h-5"/>
+                  <p className="">{text.text}</p>
+                  </div>
+                </li>
+              ))}
             </ol>
           </div>
           <div className="md:w-1/2 w-full flex lg:justify-start">
@@ -115,14 +94,14 @@ export default function Home() {
           height={680}
         />
       </section>
-      <section className="flex flex-col items-center lg:gap-24 gap-8 md:py-48 py-32 lg:px-96 md:px-16 px-8">
+      <section className="flex flex-col items-center lg:gap-24 gap-8 md:py-48 py-32 2xl:px-96 lg:px-24 md:px-16 px-8">
         <h1 className="header lg:text-[64px] md:text-[48px] text-[32px]">
           Our Instructors
         </h1>
         <div className="flex lg:flex-row flex-col items-center justify-center gap-12">
           {instructorLinks.map((link) => {
             return (
-              <article className="flex items-center flex-grow shadow-lg  lg:w-[40%] md:w-[80%] w-[95%] flex-col md:gap-11 gap-6 py-16 md:px-[45px] px-[30px] text-center rounded-[57px]">
+              <article className="flex items-center lg:min-h-[1111px] flex-grow shadow-lg  lg:w-[40%] md:w-[80%] w-[95%] flex-col md:gap-11 gap-6 py-16 md:px-[45px] px-[30px] text-center rounded-[57px]">
                 <Image
                   src={link.imgURL}
                   width={210}
@@ -132,7 +111,7 @@ export default function Home() {
                 <h1 className="header md:text-[32px] text-[24px]">
                   {link.name}
                 </h1>
-                <h1 className="font-neue_obl  md:text-[28px] text-[20px]">
+                <h1 className="font-neue italic lg:min-h-[126px]  md:text-[28px] text-[20px]">
                   {link.title}
                   <br />
                   {link.work}

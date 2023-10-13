@@ -19,7 +19,7 @@ function Footer() {
             path to success.
           </p>
         </div>
-        <div className="flex flex-col font-light text-[16px] lg:text-[24px] md:text-[20px]  lg:w-[40%] md:w-1/2 w-full gap-y-8">
+        <div className="flex flex-col  text-[16px] lg:text-[24px] md:text-[20px]  lg:w-[40%] md:w-1/2 w-full gap-y-8">
           <div className="flex flex-row items-center gap-2">
             <Image
               className="footer_icon"
@@ -29,7 +29,7 @@ function Footer() {
               height={38}
             />
             <Link
-              className="hover:text-[#C11B17] font-neue font-light"
+              className="hover:text-[#C11B17] font-neue font-extralight"
               href={"https://www.redendron.media/"}
             >
               redendron.media

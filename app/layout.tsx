@@ -35,8 +35,13 @@ const neue = localFont({
     },
     {
       path:'../public/fonts/HelveticaNeueLight.ttf',
-      weight:'300',
-      style:'normal'
+      weight:'200',
+      style:'light'
+    },
+    {
+      path:'../public/fonts/HelveticaNeue-Obl.ttf',
+      weight:'400',
+      style:'italic'
     }
   ],
   variable:'--font-neue'
@@ -53,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${helvetica.variable}  font-sans`}>
+    <html lang="en" className={`${helvetica.variable}   font-sans`}>
       <body className={`${helvetica.className}`}>
         <Header/>
         {children}

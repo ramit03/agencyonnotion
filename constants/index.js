@@ -14,3 +14,26 @@ export const instructorLinks = [
         desc:`Thupden's project management style is a blend of content mastery, innovative design, and systems-oriented thinking. He believes in viewing projects as ecosystems, where every element interacts harmoniously.`
     }
 ]
+
+export const learningList = [
+    {
+        id:'1',
+        text: ' Framework to create an agency blueprint on Notion without unnecessary complexity.',
+    },
+    {
+        id:'2',
+        text:' Why Notion is the perfect software to manage your scaling agency business.'
+    },
+    {
+        id:'3',
+        text:'A new project management philosophy for the ever-changing digital landscape.'
+    },
+    {
+        id:'4',
+        text:'How building an agency second brain creates serendipitous opportunities.'
+    },
+    {
+        id:'5',
+        text:'How to collaborate with your team, clients and freelancers effectively on Notion'
+    }
+]
