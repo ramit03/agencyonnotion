@@ -74,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${helvetica.variable}  font-sans`}>
+    <html lang="en" className={`${helvetica.variable}   font-sans`}>
       <body className={`${helvetica.className}`}>
         <Header/>
         {children}

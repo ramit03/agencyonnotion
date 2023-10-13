@@ -8,7 +8,7 @@ export default function Home() {
   const targetDate = new Date("2023-10-28T16:00:00");
   return (
     <main className="flex min-h-screen flex-col w-full items-center justify-center">
-      <section className="flex flex-col md:gap-y-16 gap-4 items-center py-24 lg:px-32 md:px-20 px-14">
+      <section className="flex flex-col md:gap-16 gap-4 items-center py-24 lg:px-32 md:px-20 px-14">
         <h1 className="justify-center text-center header lg:mt-[100px]  md:mt-[50px] mt-[12px]">
           How to run your agency on Notion
         </h1>

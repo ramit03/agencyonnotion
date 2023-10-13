@@ -43,12 +43,11 @@ function Footer() {
               width={62}
               height={38}
             />
-            <Link
-              className="hover:text-[#C11B17]  font-neue font-light"
-              href={"https://www.redendron.media/"}
+            <p
+              className="font-neue font-light"
             >
               +91 90645 38311
-            </Link>
+            </p>
           </div>
           <div className="flex items-center flex-row gap-2">
             <Image
@@ -58,12 +57,11 @@ function Footer() {
               width={62}
               height={38}
             />
-            <Link
-              className="hover:text-[#C11B17] font-neue font-extralight"
-              href={"https://www.redendron.media/"}
+            <p
+              className="font-neue font-extralight"
             >
               team@redendron.com
-            </Link>
+            </p>
           </div>
         </div>
       </div>
