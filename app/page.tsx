@@ -38,11 +38,11 @@ export default function Home() {
         <h1 className="header lg:w-[55%] w-full">
           In this free masterclass, you will learn
         </h1>
-        <div className="flex lg:flex-row flex-col font-helvetica_light lg:justify-between w-full lg:items-end md:items-end items-center">
+        <div className="flex lg:flex-row flex-col  lg:justify-between w-full lg:items-end md:items-end items-center">
           <div className="lg:w-1/2 w-full">
             <ol
               start={1}
-              className="flex subheader flex-col lg:px-6 md:px-8 gap-y-8 font-light "
+              className="flex subheader flex-col lg:px-6 md:px-8 gap-y-8 font-thin "
             >
               <li>
                 Framework to create an agency blueprint on Notion without
@@ -86,7 +86,7 @@ export default function Home() {
       </section>
       <section className="flex flex-col text-center lg:px-64 md:px-24 px-14 md:gap-12 gap-6 items-center">
         <h1 className="header">Join us live on Friday, 28th October</h1>
-        <h3 className="subheader">4 - 6 PM IST, FREE ONLINE MASTERCLASS</h3>
+        <h3 className="subheader font-normal">4 - 6 PM IST, FREE ONLINE MASTERCLASS</h3>
         <Countdown
           date={targetDate}
           renderer={({ days, hours, minutes, seconds }) => (
@@ -137,7 +137,7 @@ export default function Home() {
                   <br />
                   {link.work}
                 </h1>
-                <p className="md:text-[28px] text-[18px] font-helvetica_light">
+                <p className="md:text-[28px] text-[18px] font-neue font-light">
                   {link.desc}
                 </p>
               </article>

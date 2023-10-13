@@ -7,34 +7,23 @@ import Footer from '@/components/common/Footer'
 const helvetica = localFont({
   src: [
     {
-      path:'../public/fonts/Helvetica.ttf',
+      path:'../public/fonts/helvetica-now-var.ttf',
       weight: '400',
       style:'normal'
     },
-    {
-      path:'../public/fonts/Helvetica-Oblique.ttf',
-      weight: '400',
-      style: "normal",
-    },
-    {
-      path:'../public/fonts/Helvetica-Bold.ttf',
-      weight: '700',
-      style: "normal",
-    },
+    // {
+    //   path:'../public/fonts/Helvetica-Oblique.ttf',
+    //   weight: '400',
+    //   style: "normal",
+    // },
+    // {
+    //   path:'../public/fonts/Helvetica-Bold.ttf',
+    //   weight: '700',
+    //   style: "normal",
+    // },
     
   ],
   variable: '--font-helvatica'
-})
-
-const helvetica_light = localFont({
-  src:[
-    {
-      path:'../public/fonts/Helvetica-lightt.ttf',
-      weight: '100',
-      style: "normal",
-    },
-  ],
-  variable: '--font-helvatica_light'
 })
 
 const neue = localFont({
@@ -45,22 +34,12 @@ const neue = localFont({
       style:'normal'
     },
     {
-      path:'../public/fonts/HelveticaNeue-Obl.ttf',
-      weight:'400',
+      path:'../public/fonts/HelveticaNeueLight.ttf',
+      weight:'300',
       style:'normal'
     }
   ],
   variable:'--font-neue'
-})
-const neue_obl = localFont({
-  src: [
-    {
-      path:'../public/fonts/HelveticaNeue-Obl.ttf',
-      weight:'200',
-      style:'normal'
-    }
-  ],
-  variable:'--font-neue_obl'
 })
 
 export const metadata: Metadata = {
@@ -74,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${helvetica.variable}   font-sans`}>
+    <html lang="en" className={`${helvetica.variable}  font-sans`}>
       <body className={`${helvetica.className}`}>
         <Header/>
         {children}
