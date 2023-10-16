@@ -34,7 +34,7 @@ function SaveSeat() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className=" flex flex-col gap-y-6 md:flex-row lg:gap-x-6 md:gap-x-4 w-full justify-center items-center"
+        className=" flex flex-col gap-6 md:flex-row lg:gap-x-6 md:gap-x-4 w-full justify-center items-center"
       >
         <FormField
           control={form.control}
@@ -43,7 +43,7 @@ function SaveSeat() {
             <FormItem
               className={`form_input ${
                 isInputFocused ? "border-2" : "border-1"
-              } space-y-[-4px] w-full`}
+              } space-y-[-6px] w-full h-fit md:p-0 lg:p-2`}
             >
               <FormLabel className="px-3 lg:text-[14px] md:text-xs text-[10px]">
                 First Name
@@ -51,7 +51,7 @@ function SaveSeat() {
               <FormControl>
                 <Input
                   type="text"
-                  className="border-0 lg:text-[20px] md:text-base text-base  lg:placeholder:text-[20px] md:placeholder:text-base placeholder:text-base no-focus"
+                  className="border-0 lg:text-[20px] md:text-sm text-base  lg:placeholder:text-[20px] md:placeholder:text-sm placeholder:text-base no-focus"
                   placeholder="Enter your first name"
                   {...field}
                   onFocus={() => setIsInputFocused(true)}
@@ -69,7 +69,7 @@ function SaveSeat() {
             <FormItem
               className={`form_input ${
                 isInputFocused1 ? "border-2" : "border-1"
-              } space-y-[-4px] w-full `}
+              } space-y-[-6px] h-fit w-full md:p-0 lg:p-2`}
             >
               <FormLabel className="px-3 lg:text-[14px] md:text-xs text-[10px]">
                 Email
@@ -77,7 +77,7 @@ function SaveSeat() {
               <FormControl>
                 <Input
                   type="email"
-                  className="border-0 lg:text-[20px] md:text-base text-base  lg:placeholder:text-[20px] md:placeholder:text-base placeholder:text-base no-focus"
+                  className="border-0 lg:text-[20px] md:text-sm text-base  lg:placeholder:text-[20px] md:placeholder:text-sm placeholder:text-base no-focus"
                   placeholder="Enter your email"
                   {...field}
                   onFocus={() => setIsInputFocused1(true)}
@@ -90,7 +90,7 @@ function SaveSeat() {
         />
         <Button
           type="submit"
-          className=" w-full h-[75px] bg-gray-2 text-white rounded-[8px] lg:text-3xl md:text-[24px] text-xl"
+          className=" w-full lg:h-[75px] md:h-[65px] h-[75px] bg-gray-2 hover:bg-red-1 text-white rounded-[8px] lg:text-3xl md:text-[24px] text-xl"
         >
           Save your Seat
         </Button>

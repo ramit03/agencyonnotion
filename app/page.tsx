@@ -8,7 +8,7 @@ export default function Home() {
   const targetDate = new Date("2023-10-28T16:00:00");
   return (
     <main className="flex min-h-screen flex-col w-full items-center justify-center">
-      <section className="flex flex-col md:gap-16 gap-4 items-center py-24 lg:px-32 md:px-20 px-14">
+      <section className="flex flex-col md:gap-8 gap-4 items-center py-24 lg:px-32 md:px-20 px-14">
         <h1 className="justify-center text-center header lg:mt-[100px]  md:mt-[50px] mt-[12px]">
           How to run your agency on Notion
         </h1>
@@ -34,13 +34,13 @@ export default function Home() {
           height={580}
         />
       </section>
-      <section className="flex flex-col items-start md:my-36 mt-24 mb-12 gap-6 md:gap-16 lg:px-32 md:px-20 px-14">
+      <section className="flex flex-col items-start lg::my-36 md:my-16 md:mt-24 my-20 gap-6 md:gap-10 lg:gap-16 lg:px-32 md:px-20 px-14">
         <h1 className="header lg:w-[55%] w-full">
           In this free masterclass, you will learn
         </h1>
         <div className="flex lg:flex-row flex-col  lg:justify-between w-full lg:items-end md:items-end items-center">
           <div className="lg:w-1/2 w-full">
-            <ol className="flex subheader flex-col lg:px-0 md:px-6 gap-y-8 font-thin ">
+            <ol className="flex subheader flex-col lg:px-0 md:px-6 gap-y-4 font-thin ">
               {learningList.map((text) => (
                 <li key={text.id}>
                   <div className="flex gap-2 md:gap-6 items-start">
@@ -68,7 +68,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col text-center lg:px-64 md:px-24 px-14 md:gap-12 gap-6 items-center">
+      <section className="flex flex-col text-center lg:px-64 md:px-24 px-14 lg:gap-12 gap-6 items-center">
         <h1 className="header">Join us live on Friday, 28th October</h1>
         <h3 className="subheader font-normal">
           4 - 6 PM IST, FREE ONLINE MASTERCLASS
@@ -101,7 +101,7 @@ export default function Home() {
           height={680}
         />
       </section>
-      <section className="flex flex-col items-center lg:gap-24 gap-8 md:py-48 py-32 2xl:px-96 lg:px-24 md:px-16 px-8">
+      <section className="flex flex-col items-center lg:gap-24 gap-8 lg:py-48 md:py-36 py-32 2xl:px-96 lg:px-24 md:px-16 px-8">
         <h1 className="header lg:text-[64px] md:text-[48px] text-[32px]">
           Our Instructors
         </h1>
@@ -131,7 +131,7 @@ export default function Home() {
           })}
         </div>
       </section>
-      <section className="lg:px-40 md:px-20 px-14 flex flex-col lg:gap-14 md:gap-16 pb-24 gap-6">
+      <section className="lg:px-40 md:px-20 px-14 flex flex-col lg:gap-14 md:gap-8 pb-24 gap-6">
         <h1 className="header text-center">
           Discover the transformative power of Notion in our exclusive
           masterclass.

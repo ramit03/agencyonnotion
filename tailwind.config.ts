@@ -28,6 +28,7 @@ module.exports = {
         'orange-1':'#F0C165',
         'stone-2':'#F9F5F1',
         'white-1':'#FFFFFF',
+        'red-1':'#81130E',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
