@@ -14,7 +14,7 @@ export default function Home() {
         </h1>
         <h3 className="subheader text-center mb-4">
           The Notion blueprint for scaling agencies.
-          <span className="font-bold"> A masterclass.</span>
+          <span className="font-bold text-red-1"> A masterclass.</span>
         </h3>
         <SaveSeat />
       </section>
@@ -38,12 +38,12 @@ export default function Home() {
         <h1 className="header lg:w-[55%] w-full">
           In this free masterclass, you will learn
         </h1>
-        <div className="flex lg:flex-row flex-col  lg:justify-between w-full lg:items-end md:items-end items-center">
+        <div className="flex lg:flex-row flex-col  lg:justify-between w-full lg:items-start md:items-end items-center">
           <div className="lg:w-1/2 w-full">
-            <ol className="flex subheader flex-col lg:px-0 md:px-6 gap-y-4 font-thin ">
+            <ol className="flex subheader  flex-col gap-4">
               {learningList.map((text) => (
-                <li key={text.id}>
-                  <div className="flex gap-2 md:gap-6 items-start">
+                <li key={text.id} className="lg:my-2">
+                  <div className="flex gap-2 md:gap-6 ITE">
                     <Image
                       src={"/icons/check-mark.png"}
                       width={24}
@@ -131,7 +131,7 @@ export default function Home() {
           })}
         </div>
       </section>
-      <section className="lg:px-40 md:px-20 px-14 flex flex-col lg:gap-14 md:gap-8 pb-24 gap-6">
+      <section className="lg:px-32 md:px-20 px-14 flex flex-col lg:gap-14 md:gap-8 pb-24 gap-6">
         <h1 className="header text-center">
           Discover the transformative power of Notion in our exclusive
           masterclass.
@@ -141,7 +141,7 @@ export default function Home() {
           insights tailored for agency growth. Elevate your operations, foster
           collaboration, and scale effortlessly.{" "}
         </p>
-        <p className="lg:px-16 font-bold text-center subheader">
+        <p className="lg:px-16 font-bold text-red-1 text-center subheader">
           Reserve your seat and redefine your agency's future.
         </p>
         <SaveSeat />

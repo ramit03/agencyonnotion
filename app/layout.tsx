@@ -11,16 +11,21 @@ const helvetica = localFont({
       weight: '400',
       style:'normal'
     },
-    // {
-    //   path:'../public/fonts/Helvetica-Oblique.ttf',
-    //   weight: '400',
-    //   style: "normal",
-    // },
-    // {
-    //   path:'../public/fonts/Helvetica-Bold.ttf',
-    //   weight: '700',
-    //   style: "normal",
-    // },
+    {
+      path:'../public/fonts/Helvetica-Oblique.ttf',
+      weight: '400',
+      style: "normal",
+    },
+    {
+      path:'../public/fonts/Helvetica-lightt.ttf',
+      weight: '300',
+      style: "light",
+    },
+    {
+      path:'../public/fonts/Helvetica-Bold.ttf',
+      weight: '700',
+      style: "bold",
+    },
     
   ],
   variable: '--font-helvatica'

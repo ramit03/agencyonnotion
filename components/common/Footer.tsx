@@ -29,7 +29,7 @@ function Footer() {
               height={38}
             />
             <Link
-              className="hover:text-[#C11B17] font-neue font-extralight"
+              className="font-neue font-extralight"
               href={"https://www.redendron.media/"}
             >
               redendron.media
