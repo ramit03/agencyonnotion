@@ -30,7 +30,7 @@ function Thankyou() {
         <p>Thank you for registering, and we look forward to seeing you soon!</p>
         <p className="lg:text-2xl md:text-xl text-base font-bold lg:leading-9 md:leading-[29.44px] leading-normal">P.S. If your plans change and you can't attend, kindly opt out through the link in your email. This small step ensures a seamless experience for all. We appreciate your understanding!</p>
         <Link href={'https://chat.whatsapp.com/IhHepfIw8huGUHka71jLd9'}>
-          <Button className="bg-red-1 my-4 hover:bg-red-1/75 lg:w-[60%]  w-4/5 lg:h-28 h-[60px]">
+          <Button className="bg-red-1 my-4 hover:bg-red-1/75 lg:w-[60%] md:w-4/5 w-[90%] lg:h-28 h-[60px]">
             <div className="flex flex-row gap-2 items-center py-2">
               <Image
                 className=" w-[38px] h-[43px] md:w-[55px] md:h-[62px] lg:w-[69px] lg:h-[77px]"
