@@ -34,7 +34,7 @@ function Thankyou() {
             <div className="flex flex-row gap-2  items-center py-2">
               <Image
                 className=" w-[38px] h-[43px]"
-                src='/icons/Whatsapp.svg'
+                src='/images/Whatsapp.png'
                 width={70}
                 height={77}
                 alt="whatsapp"
