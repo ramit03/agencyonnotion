@@ -1,12 +1,10 @@
-"use client";
-"use client";
+'use client'
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -14,11 +12,12 @@ import {
 } from "@/components/ui/form";
 import * as z from "zod";
 import { SaveseatValidation } from "@/lib/validations/saveseat";
-import { useRouter } from "next/router";
 import { Input } from "../ui/input";
 import { useState } from "react";
+import  { useRouter } from "next/navigation";
 
 function SaveSeat() {
+  const router = useRouter();
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [isInputFocused1, setIsInputFocused1] = useState(false);
   const form = useForm({
@@ -29,7 +28,9 @@ function SaveSeat() {
     },
   });
 
-  function onSubmit() {}
+  function onSubmit() {
+    router.push('/thankyou')
+  }
   return (
     <Form {...form}>
       <form

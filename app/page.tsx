@@ -131,7 +131,7 @@ export default function Home() {
           })}
         </div>
       </section>
-      <section className="lg:px-32 md:px-20 px-14 flex flex-col lg:gap-14 md:gap-8 pb-24 gap-6">
+      <section className="lg:px-40 md:px-20 px-14 flex flex-col lg:gap-14 md:gap-8 pb-24 gap-6">
         <h1 className="header text-center">
           Discover the transformative power of Notion in our exclusive
           masterclass.
