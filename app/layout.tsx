@@ -17,7 +17,7 @@ const helvetica = localFont({
       style: "italic",
     },
     {
-      path:'../public/fonts/Helvetica-lightt.ttf',
+      path:'../public/fonts/Helvetica-Light.otf',
       weight: '300',
       style: "light",
     },
@@ -34,6 +34,15 @@ const helvetica = localFont({
     
   ],
   variable: '--font-helvatica'
+})
+
+const helvetica_light = localFont({
+  src:[{
+    path:'../public/fonts/Helvetica-Light.otf',
+    weight: '300',
+    style: "light",
+  }],
+  variable: '--font-helvetica_light'
 })
 
 const neue = localFont({

@@ -12,7 +12,7 @@ export default function Home() {
         <h1 className="justify-center text-center header lg:mt-[100px]  md:mt-[50px] mt-[12px]">
           How to run your agency on Notion
         </h1>
-        <h3 className="subheader text-center mb-4">
+        <h3 className="subheader font-helvetica_light font-light text-center mb-4">
           The Notion blueprint for scaling agencies.
           <span className=" text-red-1"> A masterclass.</span>
         </h3>
@@ -40,7 +40,7 @@ export default function Home() {
         </h1>
         <div className="flex lg:flex-row flex-col  lg:justify-between w-full lg:items-start md:items-end items-center">
           <div className="lg:w-1/2 w-full">
-            <ol className="flex subheader font-light flex-col gap-4">
+            <ol className="flex font-helvetica_light font-light lg:text-3xl md:text-[18px] text-base md:leading-10 leading-[36px] flex-col gap-4">
               {learningList.map((text) => (
                 <li key={text.id} className="lg:my-2">
                   <div className="flex gap-2 md:gap-6 ITE">
