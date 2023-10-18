@@ -1,7 +1,14 @@
+import Image from "next/image";
+
 function Header(){
     return(
         <nav className="topbar">
-            <h3>agencyon<span className="font-bold">notion</span></h3>
+            <Image 
+                src={'/icons/logo.svg'}
+                width={85}
+                height={85}
+                alt="logo"
+            />
         </nav>
     )
 }

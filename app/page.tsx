@@ -5,16 +5,16 @@ import Countdown from "react-countdown";
 import { instructorLinks, learningList } from "@/constants";
 
 export default function Home() {
-  const targetDate = new Date("2023-10-28T16:00:00");
+  const targetDate = new Date("2023-10-31T16:00:00");
   return (
-    <main className="flex min-h-screen flex-col w-full items-center justify-center">
+    <main className="flex min-h-screen flex-col w-full items-center mt-4 justify-center">
       <section className="flex flex-col md:gap-8 gap-4 items-center py-24 lg:px-32 md:px-20 px-14">
         <h1 className="justify-center text-center header lg:mt-[100px]  md:mt-[50px] mt-[12px]">
           How to run your agency on Notion
         </h1>
         <h3 className="subheader text-center mb-4">
           The Notion blueprint for scaling agencies.
-          <span className="font-bold text-red-1"> A masterclass.</span>
+          <span className=" text-red-1"> A masterclass.</span>
         </h3>
         <SaveSeat />
       </section>
@@ -40,7 +40,7 @@ export default function Home() {
         </h1>
         <div className="flex lg:flex-row flex-col  lg:justify-between w-full lg:items-start md:items-end items-center">
           <div className="lg:w-1/2 w-full">
-            <ol className="flex subheader  flex-col gap-4">
+            <ol className="flex subheader font-light flex-col gap-4">
               {learningList.map((text) => (
                 <li key={text.id} className="lg:my-2">
                   <div className="flex gap-2 md:gap-6 ITE">
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col text-center lg:px-64 md:px-24 px-14 lg:gap-12 gap-6 items-center">
-        <h1 className="header">Join us live on Friday, 28th October</h1>
+        <h1 className="header">Join us live on Tuesday, 31st October</h1>
         <h3 className="subheader font-normal">
           4 - 6 PM IST, FREE ONLINE MASTERCLASS
         </h3>
@@ -123,7 +123,7 @@ export default function Home() {
                   <br />
                   {link.work}
                 </h1>
-                <p className="md:text-[28px] text-[18px] font-neue font-light">
+                <p className="md:text-[26px] text-[16px] font-neue font-light">
                   {link.desc}
                 </p>
               </article>
@@ -136,7 +136,7 @@ export default function Home() {
           Discover the transformative power of Notion in our exclusive
           masterclass.
         </h1>
-        <p className="lg:px-16 md:px-8 text-center  subheader">
+        <p className="lg:px-16 md:px-8 text-center lg:leading-[47.10px] md:leading-[44.16px] leading-relaxed subheader">
           Dive into streamlined strategies, innovative tools, and actionable
           insights tailored for agency growth. Elevate your operations, foster
           collaboration, and scale effortlessly.{" "}

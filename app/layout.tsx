@@ -45,7 +45,7 @@ const neue = localFont({
     },
     {
       path:'../public/fonts/HelveticaNeueLight.ttf',
-      weight:'200',
+      weight:'300',
       style:'light'
     },
     {

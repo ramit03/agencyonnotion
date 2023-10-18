@@ -6,9 +6,9 @@ import React from "react";
 function Thankyou() {
   return (
     <section className="flex lg:flex-row flex-col lg:py-48 md:py-32 py-28 w-full h-full lg:pl-44 lg:pr-20 lg:px-0 md:px-20 px-10 lg:gap-12 md:gap-16 gap-20">
-      <div className="flex flex-col lg:gap-12 md:gap-10 gap-10 lg:w-2/3 lg:text-[32px] md:text-[24px] text-lg text-gray-1">
+      <div className="flex flex-col lg:gap-12 md:gap-10 gap-10 lg:w-2/3 lg:text-[30px] md:text-[28px] text-lg text-gray-1">
         <h1 className="header md:text-5xl text-[32px]">Just one more thing</h1>
-        <p className="font-helvetica lg:leading-[47.10px] md:leading-[41.21px]">
+        <p className="font-helvetica  font-thin lg:leading-[47.10px] md:leading-[41.21px]">
           Congratulations! You're now registered for our upcoming masterclass on
           revolutionizing your agency's project management workflow with Notion.
         </p>
