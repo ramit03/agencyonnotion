@@ -1,7 +1,7 @@
 import Header from '@/components/common/Header'
 import './globals.css'
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
+import localFont from '@next/font/local'
 import Footer from '@/components/common/Footer'
 
 const helvetica = localFont({
@@ -20,6 +20,11 @@ const helvetica = localFont({
       path:'../public/fonts/Helvetica-lightt.ttf',
       weight: '300',
       style: "light",
+    },
+    {
+      path:'../public/fonts/Helvetica-Thin.ttf',
+      weight: '100',
+      style: "thin",
     },
     {
       path:'../public/fonts/Helvetica-Bold.ttf',
