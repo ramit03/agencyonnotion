@@ -5,7 +5,7 @@ import React from "react";
 
 function Thankyou() {
   return (
-    <section className="flex lg:flex-row flex-col lg:py-48 md:py-32 py-28 w-full h-full lg:pl-44 lg:pr-20 lg:px-0 md:px-20 px-10 lg:gap-48 md:gap-16 gap-20">
+    <section className="flex lg:flex-row flex-col lg:py-48 md:py-32 py-28 w-full h-full lg:pl-44 lg:pr-20 lg:px-0 md:px-20 px-10 lg:gap-12 md:gap-16 gap-20">
       <div className="flex flex-col lg:gap-12 md:gap-10 gap-10 lg:w-2/3 lg:text-[32px] md:text-[28px] text-lg text-gray-1">
         <h1 className="header md:text-5xl text-[32px]">Just one more thing</h1>
         <p className="font-helvetica lg:leading-[47.10px] md:leading-[41.21px]">
@@ -13,7 +13,7 @@ function Thankyou() {
           revolutionizing your agency's project management workflow with Notion.
         </p>
         <h2 className="font-bold ">Here are your next steps:</h2>
-        <ol className="list-decimal lg:leading-[47.10px] md:leading-[41.21px] pl-10">
+        <ol className="list-decimal font-thin lg:leading-[47.10px] md:leading-[41.21px] pl-10">
           <li>
             <p>Check your inbox for an email with the details of the webinar, including the date and time.</p>
           </li>
@@ -44,7 +44,7 @@ function Thankyou() {
           </Button>
         </Link>       
       </div>
-      <div className="flex items-center lg:w-1/3 md:w-full justify-center">
+      <div className="flex  lg:w-1/3 md:w-full justify-center">
         <Image
           className="md:w-[300px] h-[500px] lg:w-[525px] lg:h-[889px]"
           src="/images/message.svg"
