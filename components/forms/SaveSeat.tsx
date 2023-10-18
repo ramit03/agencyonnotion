@@ -91,7 +91,7 @@ function SaveSeat() {
         />
         <Button
           type="submit"
-          className=" w-full lg:h-[75px] md:h-[65px] h-[75px] bg-red-1 text-white rounded-[8px] lg:text-3xl md:text-[24px] text-xl"
+          className=" w-full lg:h-[75px] md:h-[65px] h-[75px] bg-red-1 hover:bg-red-1/75 text-white rounded-[8px] lg:text-3xl md:text-[24px] text-xl"
         >
           Save your Seat
         </Button>
