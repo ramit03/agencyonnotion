@@ -15,15 +15,6 @@ import { SaveseatValidation } from "@/lib/validations/saveseat";
 import { Input } from "../ui/input";
 import { useState } from "react";
 import  { useRouter } from "next/navigation";
-import mailchimp from '@mailchimp/mailchimp_marketing';
-
-mailchimp.setConfig({
-  apiKey: process.env.MAILCHIMP_API_KEY,
-  server: 'us21',
-});
-
-const listId = '316514'
-
 
 function SaveSeat() {
   const router = useRouter();
@@ -37,33 +28,20 @@ function SaveSeat() {
     },
   });
 
-  async function onSubmit(data:{ firstName: string; email: string }) {  
-    const { firstName, email } = data;
-
+  async function onSubmit() {  
     try {
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
+      const response = await fetch("./api",{
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: firstName,
-          email,
+          email: form.getValues('email'),
+          name: form.getValues('firstName')
         }),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        console.log('Successfully subscribed!');
-        // Add any success handling logic here
-      } else {
-        console.error(result.error);
-        // Add error handling logic here
-      }
-
-    } catch (error) {
-      console.error('Error:', error);
+      })
+    }catch(error:any){
+      console.error(`Error ${error}`)
     }
   }
   return (
