@@ -88,8 +88,11 @@
   .header{
     @apply font-neue text-black  font-normal lg:text-[64px] md:text-[36px] text-[28px]
   }
+  .header_2{
+    @apply font-neue text-black my-2 font-normal lg:text-[56px] md:text-[30px] text-[24px]
+  }
   .subheader{
-    @apply font-helvetica font-light lg:text-3xl md:text-[18px] text-base md:leading-10 leading-[36px]
+    @apply font-helvetica font-light lg:text-[28px] md:text-[18px] text-base md:leading-10 leading-[36px]
   }
   .form_input{
     @apply border border-black bg-white text-gray-2 placeholder:text-[#abafb1]  rounded-lg md:w-1/3 w-full pt-2 h-[72px]

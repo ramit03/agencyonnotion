@@ -4,7 +4,7 @@ export const instructorLinks = [
         name:'Hemant Adhikari',
         title:'Founder/Creative Director,',
         work:'Redendron Media',
-        desc:`Hemant's approach to project management is a fusion of design thinking, coding precision, and strategic foresight. His unique methodology, rooted in both creativity and logic, makes Notion an unparalleled tool in his hands.`
+        desc:`Hemant's approach to project management is a fusion of design thinking, attention to detail, and strategic foresight. His unique methodology, rooted in both creativity and logic, makes Notion an unparalleled tool in his hands.`
     },
     {
         imgURL:"/images/thupden.png",

@@ -40,7 +40,7 @@ export default function Home() {
         </h1>
         <div className="flex lg:flex-row flex-col  lg:justify-between w-full lg:items-start md:items-end items-center">
           <div className="lg:w-1/2 w-full">
-            <ol className="flex font-helvetica_light font-light lg:text-3xl md:text-[18px] text-base md:leading-10  flex-col gap-4">
+            <ol className="flex font-helvetica_light font-light lg:text-[28px] md:text-[18px] text-base md:leading-10  flex-col gap-4">
               {learningList.map((text) => (
                 <li key={text.id} className="lg:my-2">
                   <div className="flex gap-2 md:gap-6 ITE">

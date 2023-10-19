@@ -29,7 +29,6 @@ function Footer() {
               height={38}
             />
             <Link
-              className="font-neue font-extralight"
               href={"https://www.redendron.media/"}
             >
               redendron.media
@@ -44,7 +43,6 @@ function Footer() {
               height={38}
             />
             <p
-              className="font-neue font-light"
             >
               +91 90645 38311
             </p>
@@ -58,7 +56,6 @@ function Footer() {
               height={38}
             />
             <p
-              className="font-neue font-extralight"
             >
               team@redendron.com
             </p>
