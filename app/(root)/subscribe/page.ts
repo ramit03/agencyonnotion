@@ -6,7 +6,7 @@ mailchimp.setConfig({
   
   const listId = '316514'
 
-  export default async function handler (req: { body: { name: any; email: any; }; }) {
+  export default async function handler (req) {
     const { name, email } = req.body;
     try{
     const response = await mailchimp.lists.addListMember(listId, {
