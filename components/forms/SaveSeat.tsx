@@ -15,6 +15,16 @@ import { SaveseatValidation } from "@/lib/validations/saveseat";
 import { Input } from "../ui/input";
 import { useState } from "react";
 import  { useRouter } from "next/navigation";
+import { saveUser } from "@/lib/action/user.actions";
+import mailchimp from '@mailchimp/mailchimp_marketing';
+
+mailchimp.setConfig({
+  apiKey: process.env.MAILCHIMP_API_KEY,
+  server: 'us21',
+});
+
+const listId = '316514'
+
 
 function SaveSeat() {
   const router = useRouter();
@@ -28,8 +38,22 @@ function SaveSeat() {
     },
   });
 
-  function onSubmit() {
-    router.push('/thankyou')
+  async function onSubmit(data) {  
+    const { firstName, email } = data;
+  try {
+    const response = await mailchimp.lists.addListMember(listId, {
+      email_address : email,
+      merge_fields: {
+        marge_fields: {
+          FNAME: firstName,
+      },
+      }
+    });
+    console.log(`Successfully added contact`);
+ 
+  } catch (error:any) {
+    console.error(`Error adding member to list: ${error.message}`);
+  }
   }
   return (
     <Form {...form}>
