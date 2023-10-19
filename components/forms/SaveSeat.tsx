@@ -39,20 +39,32 @@ function SaveSeat() {
 
   async function onSubmit(data:{ firstName: string; email: string }) {  
     const { firstName, email } = data;
-  try {
-    const response = await mailchimp.lists.addListMember(listId, {
-      email_address : email,
-      merge_fields: {
-        marge_fields: {
-          FNAME: firstName,
-      },
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: firstName,
+          email,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        console.log('Successfully subscribed!');
+        // Add any success handling logic here
+      } else {
+        console.error(result.error);
+        // Add error handling logic here
       }
-    });
-    console.log(`Successfully added contact`);
- 
-  } catch (error:any) {
-    console.error(`Error adding member to list: ${error.message}`);
-  }
+
+    } catch (error) {
+      console.error('Error:', error);
+    }
   }
   return (
     <Form {...form}>
