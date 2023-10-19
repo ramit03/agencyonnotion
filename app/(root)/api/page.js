@@ -1,7 +1,7 @@
-import type { NextApiResponse } from "next";
+
 import { NextResponse } from "next/server";
 
-export default async function POST(req: Request, res: NextApiResponse) {
+export default async function POST(req) {
   const { email,name } = await req.json();
   
   const MailchimpKey = process.env.MAILCHIMP_API_KEY;
