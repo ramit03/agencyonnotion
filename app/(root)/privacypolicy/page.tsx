@@ -6,7 +6,7 @@ function page() {
       <h1 className="justify-center text-center header lg:mt-[100px]  md:mt-[50px] mt-[12px]">
         Agency on Notion Privacy Policy
       </h1>
-      <p className="subheader">Last Updated: 19/10/2023</p>
+      <p className="subheader lg:text-[24px]">Last Updated: 19/10/2023</p>
       <p className="subheader">
         Welcome to Agency on Notion! This Privacy Policy outlines how we collect,
         use, disclose, and protect the personal information provided to us when
