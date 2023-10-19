@@ -9,7 +9,7 @@ function Footer() {
     >
       <h1 className="font-neue lg:text-[40px] md:text-[32px] text-[24px]">About Redendron Media</h1>
       <div className="flex md:flex-row justify-between gap-20 flex-col">
-        <div className="flex flex-col lg:w-[40%] md:w-1/2 w-full lg:text-[24px] md:text-[16px] text-[16px] gap-y-4">
+        <div className="flex flex-col font-helvetica_light font-light lg:w-[40%] md:w-1/2 w-full lg:text-[24px] md:text-[16px] text-[16px] gap-y-4">
           <p>
             We're an agency passionate about the digital domain. Our mission is
             to provide insights and tools that help businesses thrive.
@@ -20,7 +20,7 @@ function Footer() {
           </p>
         </div>
         <div className="flex flex-col  text-[16px] lg:text-[24px] md:text-[20px]  lg:w-[40%] md:w-1/2 w-full gap-y-8">
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex flex-row items-center font-helvetica_light font-light gap-2">
             <Image
               className="footer_icon"
               src={"/icons/Internet.svg"}
