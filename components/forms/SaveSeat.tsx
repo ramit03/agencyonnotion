@@ -37,7 +37,7 @@ function SaveSeat() {
     },
   });
 
-  async function onSubmit(data) {  
+  async function onSubmit(data:{ firstName: string; email: string }) {  
     const { firstName, email } = data;
   try {
     const response = await mailchimp.lists.addListMember(listId, {
