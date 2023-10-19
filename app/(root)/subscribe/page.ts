@@ -1,4 +1,5 @@
 import mailchimp from '@mailchimp/mailchimp_marketing';
+import { NextApiRequest, NextApiResponse } from 'next';
 mailchimp.setConfig({
     apiKey: process.env.MAILCHIMP_API_KEY,
     server: 'us21',
@@ -6,7 +7,7 @@ mailchimp.setConfig({
   
   const listId = '316514'
 
-  export default async function handler (req) {
+  export default async function handler (req: NextApiRequest) {
     const { name, email } = req.body;
     try{
     const response = await mailchimp.lists.addListMember(listId, {
