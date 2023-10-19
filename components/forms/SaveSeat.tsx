@@ -15,7 +15,6 @@ import { SaveseatValidation } from "@/lib/validations/saveseat";
 import { Input } from "../ui/input";
 import { useState } from "react";
 import  { useRouter } from "next/navigation";
-import { saveUser } from "@/lib/action/user.actions";
 import mailchimp from '@mailchimp/mailchimp_marketing';
 
 mailchimp.setConfig({
