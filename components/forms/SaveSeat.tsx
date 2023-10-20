@@ -38,8 +38,12 @@ function SaveSeat() {
     method: 'POST',
   });
 
-  const json_res = await response.json();
-  console.log(json_res)
+  try {
+    const json_res = await response.json();
+    console.log(json_res);
+  } catch (error) {
+    console.error("Failed to parse JSON:", error);
+  }
 
 }
   return (
