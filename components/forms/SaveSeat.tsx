@@ -29,21 +29,19 @@ function SaveSeat() {
   });
 
   async function onSubmit() {  
-    try {
-      const response = await fetch("./api",{
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: form.getValues('email'),
-          name: form.getValues('firstName')
-        }),
-      })
-    }catch(error:any){
-      console.error(`Error ${error}`)
-    }
-  }
+    const response = await fetch("/api",{
+    body: JSON.stringify({
+      email:'ramitsingh12@gmail.com',
+      name:'ramit',
+    }),
+    headers: {'Content-Type':`application/json; charset=utf-8`},
+    method: 'POST',
+  });
+
+  const json_res = await response.json();
+  console.log(json_res)
+
+}
   return (
     <Form {...form}>
       <form
