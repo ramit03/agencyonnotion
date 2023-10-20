@@ -15,6 +15,7 @@ import { SaveseatValidation } from "@/lib/validations/saveseat";
 import { Input } from "../ui/input";
 import { useState } from "react";
 import  { useRouter } from "next/navigation";
+import POST from "@/app/(root)/api/page";
 
 function SaveSeat() {
   const router = useRouter();
@@ -29,20 +30,7 @@ function SaveSeat() {
   });
 
   async function onSubmit() {  
-    try {
-      const response = await fetch("./api",{
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: form.getValues('email'),
-          name: form.getValues('firstName')
-        }),
-      })
-    }catch(error:any){
-      console.error(`Error ${error}`)
-    }
+    POST(form.getValues("email"), form.getValues("firstName")) 
   }
   return (
     <Form {...form}>
