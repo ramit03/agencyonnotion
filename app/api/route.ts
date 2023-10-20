@@ -21,8 +21,6 @@ export async function POST(req: NextRequest) {
 
   const email = parsedBody.email;
   const name =parsedBody.name;
-  console.log('email ' ,email)
-  console.log('name' ,name)
   if (!email || !name) {
     return new NextResponse("Error 400", { status: 400 });
   }
