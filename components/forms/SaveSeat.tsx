@@ -13,7 +13,7 @@ import {
 import * as z from "zod";
 import { SaveseatValidation } from "@/lib/validations/saveseat";
 import { Input } from "../ui/input";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import  { useRouter } from "next/navigation";
 
 function SaveSeat() {
@@ -31,8 +31,8 @@ function SaveSeat() {
   async function onSubmit() {  
     const response = await fetch("/api",{
     body: JSON.stringify({
-      email:'ramitsingh12@gmail.com',
-      name:'ramit',
+      email:form.getValues('email'),
+      name:form.getValues('firstName'),
     }),
     headers: {'Content-Type':`application/json; charset=utf-8`},
     method: 'POST',
@@ -41,6 +41,11 @@ function SaveSeat() {
   try {
     const json_res = await response.json();
     console.log(json_res);
+    if (response.ok){
+      router.push('/thankyou');
+    }else{
+      console.error("Server responded with an error", json_res)
+    }
   } catch (error) {
     console.error("Failed to parse JSON:", error);
   }

@@ -21,6 +21,8 @@ export async function POST(req: NextRequest) {
 
   const email = parsedBody.email;
   const name =parsedBody.name;
+  console.log('email ' ,email)
+  console.log('name' ,name)
   if (!email || !name) {
     return new NextResponse("Error 400", { status: 400 });
   }
@@ -29,7 +31,8 @@ export async function POST(req: NextRequest) {
     const data = {
       api_key: API_Key,
       email: email,
-      name: name,
+      first_name: name,
+      tags:'subscriber'
     };
 
     const response = await fetch(url, {
@@ -39,8 +42,9 @@ export async function POST(req: NextRequest) {
     });
 
     if (response.status === 200) {
-      return NextResponse.json({ message: 'Success' });
-  } else if (response.status === 400) {
+      const responseData = await response.json();
+      return NextResponse.json(responseData);
+    } else if (response.status === 400) {
       const data = await response.json();
       return new NextResponse(data.message || "Error", { status: 400 });
   } else {
