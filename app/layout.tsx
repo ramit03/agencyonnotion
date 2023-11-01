@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import localFont from '@next/font/local'
 import Footer from '@/components/common/Footer'
+import AnalyticsComponent from '@/components/analytics/page';
 
 const helvetica = localFont({
   src: [
@@ -76,9 +77,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
     <html lang="en" className={`${helvetica.variable}   font-sans`}>
       <body className={`${helvetica.className}`}>
+        <AnalyticsComponent />
         <Header/>
         {children}
         <Footer/>

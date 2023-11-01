@@ -18,7 +18,6 @@ export async function POST(req: NextRequest) {
     return new NextResponse("Invalid request body", { status: 400 });
   }
 
-
   const email = parsedBody.email;
   const name =parsedBody.name;
   if (!email || !name) {
