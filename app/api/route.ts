@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
       api_key: API_Key,
       email: email,
       first_name: name,
-      tags:'subscriber'
+      tags:'webinar_subscriber'
     };
 
     const response = await fetch(url, {
