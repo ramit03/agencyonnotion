@@ -16,7 +16,7 @@ import { Input } from "../ui/input";
 import { ChangeEvent, useState } from "react";
 import  { useRouter } from "next/navigation";
 
-function SaveSeat() {
+function  SaveSeat() {
   const router = useRouter();
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [isInputFocused1, setIsInputFocused1] = useState(false);
