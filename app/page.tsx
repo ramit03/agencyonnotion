@@ -3,19 +3,30 @@ import SaveSeat from "@/components/forms/SaveSeat";
 import Image from "next/image";
 import Countdown from "react-countdown";
 import { instructorLinks, learningList } from "@/constants";
-import { useEffect, useState } from "react";
+import { format } from 'date-fns';
+import { utcToZonedTime } from 'date-fns-tz';
 
 export default function Home() {
-  const targetDate = new Date("2023-11-17T19:00:00");
-  const [localEventTime, setLocalEventTime] = useState('')
-  useEffect(()=> {
-    setLocalEventTime(targetDate.toLocaleString(undefined, {
-      hour: 'numeric',
-      hour12: true
-    }))
+  const targetDate = new Date("2023-11-17T19:00:00Z");
+  const targetDateUTC = new Date("2023-11-17T13:30:00Z");
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const zonedDate = utcToZonedTime(targetDateUTC, timeZone);
+  const timepattern = 'h:mm a'
+  const output = format(zonedDate,timepattern,{timeZone})
 
-  })
- 
+  function addOrdinalSuffix(day:number) {
+    if (day > 3 && day < 21) return day + 'th';
+    switch (day % 10) {
+      case 1:  return day + "st";
+      case 2:  return day + "nd";
+      case 3:  return day + "rd";
+      default: return day + "th";
+    }
+  }
+  const dayOfWeek = format(zonedDate, 'EEEE', { timeZone });
+  const dayOfMonth = addOrdinalSuffix(zonedDate.getDate());
+  const month = format(zonedDate, 'MMMM', { timeZone }); 
+  const outputDate = `${dayOfWeek}, ${dayOfMonth} ${month}`;
   
   return (
     <main className="flex min-h-screen flex-col w-full items-center mt-4 justify-center">
@@ -80,9 +91,9 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col text-center lg:px-64 md:px-24 px-14 lg:gap-12 gap-6 items-center">
-        <h1 className="header">Join us live on Tuesday, 17th November</h1>
+        <h1 className="header">Join us live on {outputDate}</h1>
         <h3 className="subheader font-normal">
-          {localEventTime}, FREE ONLINE MASTERCLASS
+          {output}, FREE ONLINE MASTERCLASS
         </h3>
         <Countdown
           date={targetDate}
