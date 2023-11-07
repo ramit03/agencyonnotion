@@ -7,13 +7,6 @@ import { format } from 'date-fns';
 import { utcToZonedTime } from 'date-fns-tz';
 
 export default function Home() {
-  const targetDate = new Date("2023-11-17T19:00:00Z");
-  const targetDateUTC = new Date("2023-11-17T13:30:00Z");
-  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const zonedDate = utcToZonedTime(targetDateUTC, timeZone);
-  const timepattern = 'h:mm a'
-  const output = format(zonedDate,timepattern,{timeZone})
-
   function addOrdinalSuffix(day:number) {
     if (day > 3 && day < 21) return day + 'th';
     switch (day % 10) {
@@ -23,9 +16,16 @@ export default function Home() {
       default: return day + "th";
     }
   }
-  const dayOfWeek = format(zonedDate, 'EEEE', { timeZone });
+  const targetDate = new Date("2023-11-17T19:00:00Z");
+  const targetDateUTC = new Date("2023-11-17T13:30:00Z");
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const zonedDate = utcToZonedTime(targetDateUTC, timeZone);
+
+  const timepattern = 'h:mm a'
+  const output = format(zonedDate,timepattern)
+  const dayOfWeek = format(zonedDate, 'EEEE');
   const dayOfMonth = addOrdinalSuffix(zonedDate.getDate());
-  const month = format(zonedDate, 'MMMM', { timeZone }); 
+  const month = format(zonedDate, 'MMMM'); 
   const outputDate = `${dayOfWeek}, ${dayOfMonth} ${month}`;
   
   return (
