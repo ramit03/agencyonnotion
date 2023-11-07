@@ -3,9 +3,20 @@ import SaveSeat from "@/components/forms/SaveSeat";
 import Image from "next/image";
 import Countdown from "react-countdown";
 import { instructorLinks, learningList } from "@/constants";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const targetDate = new Date("2023-10-31T16:00:00");
+  const targetDate = new Date("2023-11-17T19:00:00");
+  const [localEventTime, setLocalEventTime] = useState('')
+  useEffect(()=> {
+    setLocalEventTime(targetDate.toLocaleString(undefined, {
+      hour: 'numeric',
+      hour12: true
+    }))
+
+  })
+ 
+  
   return (
     <main className="flex min-h-screen flex-col w-full items-center mt-4 justify-center">
       <section className="flex flex-col md:gap-8 gap-4 items-center py-24 lg:px-32 md:px-20 px-14">
@@ -69,9 +80,9 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col text-center lg:px-64 md:px-24 px-14 lg:gap-12 gap-6 items-center">
-        <h1 className="header">Join us live on Tuesday, 31st October</h1>
+        <h1 className="header">Join us live on Tuesday, 17th November</h1>
         <h3 className="subheader font-normal">
-          4 - 6 PM IST, FREE ONLINE MASTERCLASS
+          {localEventTime}, FREE ONLINE MASTERCLASS
         </h3>
         <Countdown
           date={targetDate}

@@ -50,7 +50,7 @@ function Thankyou() {
           the link in your email. This small step ensures a seamless experience
           for all. We appreciate your understanding!
         </p>
-        <Link href={"https://chat.whatsapp.com/IhHepfIw8huGUHka71jLd9"}>
+        <Link href={"https://chat.whatsapp.com/DI8FhjurPllC5ja6KlUM4x"}>
           <Button className="bg-red-1 my-4 hover:bg-red-1/75 w-fit lg:h-28 md:h-[86px] h-[60px] px-8 py-3">
             <div className="flex flex-row gap-2 items-center">
               <Image
