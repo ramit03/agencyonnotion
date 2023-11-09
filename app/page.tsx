@@ -16,7 +16,7 @@ export default function Home() {
       default: return day + "th";
     }
   }
-  const targetDate = new Date("2023-11-17T19:00:00Z");
+  const targetDate = new Date("2023-11-17T19:00:00");
   const targetDateUTC = new Date("2023-11-17T13:30:00Z");
   const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const zonedDate = utcToZonedTime(targetDateUTC, timeZone);
