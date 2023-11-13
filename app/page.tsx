@@ -131,7 +131,7 @@ export default function Home() {
         <div className="flex lg:flex-row flex-col items-center justify-center gap-12">
           {instructorLinks.map((link) => {
             return (
-              <article className="flex items-center lg:min-h-[900px] flex-grow shadow-xl  lg:w-[40%] md:w-[80%] w-[95%] flex-col md:gap-11 gap-6 py-16 md:px-[45px] px-[30px] text-center rounded-[57px]">
+              <article className="flex items-center lg:min-h-[1000px] flex-grow shadow-xl  lg:w-[40%] md:w-[80%] w-[95%] flex-col md:gap-11 gap-6 py-16 md:px-[45px] px-[30px] text-center rounded-[57px]">
                 <Image
                   src={link.imgURL}
                   width={210}
