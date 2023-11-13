@@ -10,9 +10,9 @@ function Thankyou() {
         <h1 className="header md:text-5xl text-[32px]">Just one more thing</h1>
         <p className="font-helvetica_light font-light lg:leading-[47.10px] md:leading-[41.21px]">
           Congratulations! You've successfully registered for our upcoming
-          masterclass on revolutionizing your agency's project management with
+          masterclass on scaling your agency with
           Notion. To finalize your spot and receive all the details, please
-          check your email and confirm your subscription.
+          check your email.
         </p>
         <h2 className="font-bold ">Here are your next steps:</h2>
         <ol className="list-decimal font-helvetica_light font-light lg:leading-[47.10px] md:leading-[41.21px] pl-10">
@@ -32,7 +32,7 @@ function Thankyou() {
           <li>
             <p>
               Get excited! You're about to learn some game-changing strategies
-              that will take your agency's project management to the next level.
+              that will take your agency to the next level.
             </p>
           </li>
           <li>

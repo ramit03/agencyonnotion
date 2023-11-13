@@ -5,6 +5,7 @@ import Countdown from "react-countdown";
 import { instructorLinks, learningList } from "@/constants";
 import { format } from 'date-fns';
 import { utcToZonedTime } from 'date-fns-tz';
+import Link from "next/link";
 
 export default function Home() {
   function addOrdinalSuffix(day:number) {
@@ -146,7 +147,7 @@ export default function Home() {
                   {link.work}
                 </h1>
                 <p className="md:text-[26px] text-[16px] font-neue font-light">
-                  {link.desc}
+                  {link.desc} 
                 </p>
               </article>
             );

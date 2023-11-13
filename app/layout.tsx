@@ -1,7 +1,7 @@
 import Header from '@/components/common/Header'
 import './globals.css'
 import type { Metadata } from 'next'
-import localFont from '@next/font/local'
+import localFont from "next/font/local"
 import Footer from '@/components/common/Footer'
 import AnalyticsComponent from '@/components/analytics/page';
 
