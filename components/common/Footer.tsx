@@ -30,6 +30,7 @@ function Footer() {
             />
             <Link
               href={"https://www.redendron.media/"}
+              className="hover:text-rose-1"
             >
               redendron.media
             </Link>
@@ -55,10 +56,12 @@ function Footer() {
               width={62}
               height={38}
             />
-            <p
+            <Link
+            href={`mailto:team@redendron.com`}
+            className="hover:text-rose-1"
             >
               team@redendron.com
-            </p>
+            </Link>
           </div>
         </div>
       </div>

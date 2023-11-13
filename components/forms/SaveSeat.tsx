@@ -10,16 +10,17 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import * as z from "zod";
 import { SaveseatValidation } from "@/lib/validations/saveseat";
 import { Input } from "../ui/input";
-import { ChangeEvent, useState } from "react";
+import {  useState } from "react";
 import  { useRouter } from "next/navigation";
+import {ClipLoader} from 'react-spinners';
 
 function  SaveSeat() {
   const router = useRouter();
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [isInputFocused1, setIsInputFocused1] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
   const form = useForm({
     resolver: zodResolver(SaveseatValidation),
     defaultValues: {
@@ -29,6 +30,7 @@ function  SaveSeat() {
   });
 
   async function onSubmit() {  
+    setIsLoading(true)
     const response = await fetch("/api",{
     body: JSON.stringify({
       email:form.getValues('email'),
@@ -48,6 +50,8 @@ function  SaveSeat() {
     }
   } catch (error) {
     console.error("Failed to parse JSON:", error);
+  } finally {
+    setIsLoading(false)
   }
 
 }
@@ -112,8 +116,8 @@ function  SaveSeat() {
         <Button
           type="submit"
           className=" w-full lg:h-[75px] md:h-[65px] h-[75px] bg-red-1 hover:bg-red-1/75 text-white rounded-[8px] lg:text-3xl md:text-[24px] text-xl"
-        >
-          Save your Seat
+        > {isLoading?<ClipLoader color="white"/>:"Save your Seat"}
+         
         </Button>
       </form>
     </Form>
