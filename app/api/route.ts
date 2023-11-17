@@ -1,14 +1,17 @@
 import { NextResponse, NextRequest } from 'next/server';
+import Stripe from 'stripe';
 const API_Key = process.env.CONVERTKIT_API_KEY
 const FORM_ID = process.env.CONVERTKIT_FORM_ID 
 const BASE_URL = 'https://api.convertkit.com/v3';
+
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY || 'your_fallback_stripe_secret_key';
+const stripe = new Stripe(stripeSecretKey);
 
 interface ParsedBody {
   email?: string;
   name?: string;
   [key: string]: any;
 }
-
 
 export async function POST(req: NextRequest) {
   let parsedBody: ParsedBody;
