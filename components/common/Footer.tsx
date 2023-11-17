@@ -8,7 +8,7 @@ function Footer() {
       className="bottombar flex flex-col items-start lg:py-28 md:py-24 py-20 md:gap-8 gap-4 lg:px-32 md:px-20 px-16"
     >
       <h1 className="font-neue lg:text-[40px] md:text-[32px] text-[24px]">About Redendron Media</h1>
-      <div className="flex md:flex-row justify-between gap-20 flex-col">
+      <div className="flex w-full md:flex-row justify-between gap-20 flex-col">
         <div className="flex flex-col font-helvetica_light font-light lg:w-[40%] md:w-1/2 w-full lg:text-[24px] md:text-[16px] text-[16px] gap-y-4">
           <p>
             We're an agency passionate about the digital domain. Our mission is
