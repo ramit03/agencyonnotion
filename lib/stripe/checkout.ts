@@ -4,12 +4,9 @@ import { loadStripe, Stripe } from '@stripe/stripe-js';
 type LineItem = {
     price: string; 
     quantity: number;
-    type: 'one_time' | 'subscription';
+
   };
   
-  type CheckoutProps = {
-    lineItems: LineItem[];
-  };
 
 
   let stripePromise: Promise<Stripe | null> | undefined;
@@ -25,7 +22,7 @@ type LineItem = {
     return stripePromise;
   }
   
-  export async function checkout({ lineItems }: CheckoutProps): Promise<void>  {
+  export async function checkout( lineItems : LineItem[]): Promise<void>  {
       const stripe = await getStripe()
       if (stripe) {
         await stripe.redirectToCheckout({

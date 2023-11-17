@@ -56,9 +56,9 @@ function Replay() {
    </div>
    <Button
     onClick={(()=>{
-      checkout({
-        lineItems:[{price:'price_1ODQJXSHASzjfwwQ3YphRzoT',quantity:1,type:'one_time'}]
-      })
+      checkout([
+        { price: 'price_1ODQJXSHASzjfwwQ3YphRzoT', quantity: 1 }
+      ]);
     } )}
    >Buy Now</Button>
 
