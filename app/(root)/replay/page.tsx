@@ -21,7 +21,7 @@ function Replay() {
     </h3>
    
    <div className='flex flex-col items-center gap-12 mb-6 py-4'>
-    <h3 className='subheader'>Don't Miss Out! Exclusive Replay Access Ending Soon.</h3>
+    <h3 className='subheader'>Don't Miss Out! Exclusive Replay Access and Special Offer Ending Soon.</h3>
     <Countdown
           date={targetDate}
           renderer={({ days, hours, minutes, seconds }) => (
@@ -41,20 +41,30 @@ function Replay() {
             </div>
           )}
         />
-    <h3 className='subheader md:text-[22px] text-gray-1 text-[16px]'>Replay will be accessible until 20th November. Make sure to watch it before the countdown ends!</h3>
+    <h3 className='subheader md:text-[22px] text-gray-1 text-[16px]'>Replay and special offer will be accessible until 20th November. Make sure to watch it before the countdown ends!</h3>
    </div>
    <div className='relative lg:w-3/4 md:w-[90%] w-[95%] pb-[75%] max-h-48'>
     <YouTube className='absolute top-0 left-0 w-full h-full' videoId='yGJtPItwSlk' opts={opts}/>
    </div>
-   <div className='w-ful items-center flex flex-col lg:py-16 md:py-10 py-8 h-full md:px-20 px-10 lg:gap-8 md:gap-6 gap-8'>
+   <div className='w-ful items-center flex flex-col mt-[-600px] lg:py-16 md:py-10 py-8 h-full md:px-20 px-10 lg:gap-8 md:gap-6 gap-12'>
       <h1 className='header  text-center mb-4 lg:text-[56px] mt-6 md:text-[32px] text-[24px]'>
         Are you ready to go from $0 to a five-figure agency and beyond in less than three months?   
       </h1>
       <p className='subheader'>
-     
+            We are commited to helping agency owners build  efficient systems for scalability, AND THAT'S WHY WE'RE OFFERING IT ALL OF THESE AT A HUGE DISCOUNT FOR A LIMITED TIME
+      </p>
+      <Image 
+       src={"/images/mockup.png"}
+       alt={"course"}
+       width={600}
+       height={550}
+      />
+       <p className='subheader'>
+          Enroll today for just <span className='font-bold'>$87</span>. This pricing is exclusive to mastercalss attendees for a limited time, after which the price will go up to  <span className='font-bold'>$117</span>.
       </p>
    </div>
    <Button
+    className=" w-1/3 lg:h-[75px] md:h-[65px] h-[75px] bg-red-1 hover:bg-red-1/75 text-white rounded-[8px] lg:text-3xl md:text-[24px] text-xl"
     onClick={(()=>{
       checkout([
         { price: 'price_1ODQJXSHASzjfwwQ3YphRzoT', quantity: 1 }
