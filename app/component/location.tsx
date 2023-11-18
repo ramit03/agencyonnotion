@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const fetchCountryCode = async (latitude: number, longitude: number): Promise<string | null> => {
-  const apiKey = process.env.NEXT_PUBLIC_LOCATION_API; // Your LocationIQ API key
+  const apiKey = process.env.NEXT_PUBLIC_LOCATION_API;
   const url = `https://eu1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${latitude}&lon=${longitude}&format=json`;
 
   try {
