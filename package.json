@@ -21,6 +21,7 @@
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",
+    "firebase": "^10.6.0",
     "jsonp": "^0.2.1",
     "lucide-react": "^0.284.0",
     "next": "13.5.4",
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.4",
+    "@types/firebase": "^3.2.1",
     "@types/gtag.js": "^0.0.18",
     "@types/mailchimp__mailchimp_marketing": "^3.0.16",
     "@types/node": "^20",

@@ -1,15 +1,37 @@
 "use client";
 import Image from 'next/image';
-import YouTube,{ YouTubeProps }  from 'react-youtube';
-import Countdown from "react-countdown";
 import { Button } from '@/components/ui/button';
 import { checkout } from '@/lib/stripe/checkout';
+import { useEffect, useState } from 'react';
+import { getLocationCountryCode } from '@/app/component/location';
+
 function Replay() {
-      const opts: YouTubeProps['opts'] = {
-        width: '100%',
-        height: '50%'
-      };
-    const targetDate = new Date("2023-11-20T08:00:00");
+  
+  const USD_PRICE_ID = 'price_1ODl0rSHASzjfwwQmVsaLkyH';
+  const INR_PRICE_ID = 'price_1ODl1VSHASzjfwwQ1PGECrbz';
+  useEffect(() => {
+    const fetchLocation = async () => {
+      const countryCode = await getLocationCountryCode();
+      console.log(countryCode);
+      if (countryCode === 'IN') {
+        setPriceId(INR_PRICE_ID);
+      } else {
+        setPriceId(USD_PRICE_ID);
+      }
+    };
+
+    fetchLocation();
+  }, []);
+
+  const [priceId, setPriceId ] = useState(USD_PRICE_ID);
+
+  const handleLocationIdentified = (countryCode: string | null) => {
+    if (countryCode === 'IN') {
+      setPriceId(INR_PRICE_ID);
+    } else {
+      setPriceId(USD_PRICE_ID);
+    }
+  };
 
   return (
     <section className="flex lg:flex-col text-center items-center w-full flex-col lg:py-48 md:py-32 py-28 h-full md:px-20 px-10 lg:gap-8 md:gap-6 gap-8">
@@ -115,7 +137,7 @@ function Replay() {
     className=" w-full lg:h-[75px] md:h-[65px] h-[75px] bg-red-1 hover:bg-red-1/75 text-white rounded-[8px] lg:text-3xl md:text-[24px] text-xl"
     onClick={(()=>{
       checkout([
-        { price: 'price_1ODQJXSHASzjfwwQ3YphRzoT', quantity: 1 }
+        { price: priceId, quantity: 1 }
       ]);
     } )}
    >Preorder Now</Button>
