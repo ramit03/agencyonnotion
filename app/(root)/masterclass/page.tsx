@@ -34,20 +34,19 @@ function Replay() {
   };
 
   return (
-    <section className="flex lg:flex-col text-center items-center w-full flex-col lg:py-48 md:py-32 py-28 h-full md:px-20 px-10 lg:gap-8 md:gap-6 gap-8">
-     <h1 className="justify-center text-center text-4xl leading-[48px] md:mt-[0px] mt-[12px]">
+    <>
+    <section className="flex lg:flex-col text-center items-center w-full flex-col lg:py-48 md:py-32 py-28 h-full lg:px-[260px] md:px-20 px-10 lg:gap-8 md:gap-6 gap-8">
+     <h1 className="justify-center text-center text-4xl md:text-3xl text-[24px] md:leading-[48px] leading-normal md:mt-[0px] mt-[12px]">
      Oops! You missed your chance to watch the replay and enroll in Agency on Notion Product Suite at our special price. But you can still grab it below!
-    </h1>
-   
-   
-   <div className='w-full  flex flex-col lg:py-16 md:py-10 py-8 h-full md:px-20 px-10 lg:gap-8 md:gap-6 gap-12'>
-      <h1 className='header  text-center mb-4 lg:text-[56px] mt-6 md:text-[32px] text-[24px]'>
+    </h1>   
+   <div className='w-full  flex flex-col h-full lg:gap-8 md:gap-6 gap-8'>
+      <h1 className='header text-center mb-4 lg:text-[56px] mt-6 md:text-[32px] text-[24px]'>
         Are you ready to go from $0 to a five-figure agency and beyond in less than three months?   
       </h1>
-      <p className='text-3xl text-red-1 font-semibold'>
+      <p className='md:text-3xl text-[24px] text-red-1 font-semibold'>
            Introducing
       </p>
-      <h1 className='text-4xl'>
+      <h1 className='text-4xl md:text-3xl text-[24px] text-center'>
       Agency on Notion: Create an Agency Operating System on Notion 
       </h1>
       <h2 className='subheader mb-8'>
@@ -60,11 +59,11 @@ function Replay() {
        width={700}
        height={550}
       />
-      <div className='flex justify-between items-center my-20'>
-      <h2 className='text-5xl ml-48 w-1/2'>
+      <div className='flex md:flex-row flex-col justify-between items-center w-full md:my-20 my-10 md:gap-0 gap-6'>
+      <h2 className='lg:text-5xl md:text-3xl md:w-[55%] w-full text-[24px] text-center'>
       What's inside?
       </h2>
-      <ul className='text-start space-y-2 w-1/2'>
+      <ul className='text-start space-y-2 md:w-[45%] w-full '>
         <li className='subheader'>
             <span className='font-semibold'>Course 001:</span> The Deep Game Fundamentals
         </li>
@@ -89,11 +88,9 @@ function Replay() {
         </li>
       </ul>
       </div>
-      <div className='flex justify-between items-center mb-20 w-full'>
-      <h2 className='text-5xl ml-48 w-1/2'>
-      Bonus Resources
-      </h2>
-      <ul className='text-start space-y-2 w-1/2'>
+      <div className="flex md:flex-row flex-col justify-between items-center w-full md:mb-20 mb-10 md:gap-0 gap-6">
+          <h2 className="lg:text-5xl md:text-3xl md:w-[55%] w-full text-[24px] text-center">Bonus Resources</h2>
+          <ul className="text-start space-y-2 md:w-[45%] w-full">
         <li className='subheader'>
             <span className='font-semibold'>Resource 001:</span> Simple Customer Relationship Management Template
 
@@ -144,6 +141,7 @@ function Replay() {
 
    
     </section>
+  </>
   )
 }
 

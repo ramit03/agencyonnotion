@@ -151,7 +151,7 @@ function Replay() {
             </li>
           </ul>
         </div>
-        <div className="flex md:flex-row flex-col justify-between items-center w-full md:mb-20 md:my-20 mb-10 md:gap-0 gap-6">
+        <div className="flex md:flex-row flex-col justify-between items-center w-full md:mb-20  mb-10 md:gap-0 gap-6">
           <h2 className="lg:text-5xl md:text-3xl md:w-[55%] w-full text-[24px] text-center">Bonus Resources</h2>
           <ul className="text-start space-y-2 md:w-[45%] w-full">
             <li className="subheader">
