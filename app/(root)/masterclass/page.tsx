@@ -55,7 +55,7 @@ function Replay() {
       <Image 
        src={"/images/mockup.png"}
        alt={"course"}
-       className='w-full'
+       className='w-full md:px-0 px-[8px]'
        width={700}
        height={550}
       />
