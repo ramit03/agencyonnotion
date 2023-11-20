@@ -9,7 +9,7 @@ import  storage  from "@/lib/helpers/firebase";
 import { ref, getDownloadURL } from 'firebase/storage';
 
 function Replay() {
-  const targetDate = new Date("2023-11-21T08:00:00");
+  const targetDate = new Date("2023-11-21T12:00:00");
   const USD_PRICE_ID = "price_1ODQJXSHASzjfwwQ3YphRzoT";
   const INR_PRICE_ID = "price_1ODReISHASzjfwwQxwslwRAF";
 
