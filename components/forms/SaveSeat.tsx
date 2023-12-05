@@ -59,7 +59,7 @@ function  SaveSeat() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className=" flex flex-col gap-6 md:flex-row lg:gap-x-6 md:gap-x-4 w-full justify-center items-center"
+        className=" flex flex-col gap-6 text-start md:flex-row lg:gap-x-6 md:gap-x-4 w-full justify-center items-center"
       >
         <FormField
           control={form.control}

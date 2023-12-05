@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
       api_key: API_Key,
       email: email,
       first_name: name,
-      tags:[4222539],
+      tags:[4335198],
     };
 
     const response = await fetch(url, {
