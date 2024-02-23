@@ -13,7 +13,6 @@ interface NavbarScrollProps {
 
 function Header() {
   const [navbar, setNavbar] = useState(false);
-  console.log(navbar);
   const pathname = usePathname();
   const toggleMenu = () => {
     setNavbar((prevOpen) => !prevOpen);
@@ -21,27 +20,41 @@ function Header() {
 
   const menuVars = {
     initial: {
-     scaleX: 0,
-     scaleY:0,
-     originX: 1,
-     originY:0,
+      opacity: 0,
     },
     animate: {
-      scaleX: 1,
-      scaleY:1,
+      opacity: 1,
       transition: {
-        duration: 0.4,
-       ease: [0.12, 0, 0.39, 0],
+        duration: 0.5,
+        ease: [0.61, 1, 0.88, 1],
       },
     },
     exit: {
-      scaleY:0,
-      originY:0,
-      scaleX: 0,
-      originX: 1,
+      opacity: 0,
       transition: {
-        duration: 0.4,
-        ease: [0.12, 0, 0.39, 0],
+        duration: 0.5,
+        ease: [0.61, 1, 0.88, 1],
+      },
+    },
+  };
+
+  const linkVars = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        delay: 0.6,
+        duration: 1,
+        ease: [0.61, 1, 0.88, 1],
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.1,
+        ease: [0.61, 1, 0.88, 1],
       },
     },
   };
@@ -92,20 +105,26 @@ function Header() {
             className="fixed left-0 top-0  z-50 h-screen w-full origin-top bg-black px-24 py-20"
           >
             <div className="w-full relative h-full">
-              <Button
-                onClick={toggleMenu}
-                className="absolute  top-0 right-0 bg-transparent"
-              >
-                <Image
-                  src={"/icons/close.svg"}
-                  width={43}
-                  height={34}
-                  className=""
-                  alt="Close"
-                />
-              </Button>
+              <motion.div variants={linkVars} className="relative">
+                <Button
+                  onClick={toggleMenu}
+                  className="absolute  top-4 -right-4 bg-transparent"
+                >
+                  <Image
+                    src={"/icons/close.svg"}
+                    width={43}
+                    height={34}
+                    className=""
+                    alt="Close"
+                  />
+                </Button>
+              </motion.div>
+
               <div className="flex flex-row justify-between h-full">
-                <div className="flex flex-row self-end items-center gap-2">
+                <motion.div
+                  variants={linkVars}
+                  className="flex flex-row self-end items-center gap-2"
+                >
                   <div className="relative h-20 w-20">
                     <Image
                       src={"/icons/logo1.svg"}
@@ -116,19 +135,21 @@ function Header() {
                     />
                   </div>
                   <h4 className="font-neue text-white text-4xl">Redendron</h4>
-                </div>
+                </motion.div>
                 <div className="w-1/2 text-white font-neue text-[36px] 2xl:text-5xl pt-32 flex flex-col justify-end gap-3 2xl:gap-14">
                   {navlinks.map((item) => (
-                    <Link
-                      className={cn(
-                        "space-y-6",
-                        isCurrentPath(item.link) ? "text-red-1" : "text-white"
-                      )}
-                      href={item.link}
-                    >
-                      <p className="uppercase">{item.name}</p>
-                      <div className="bg-white w-full h-px" />
-                    </Link>
+                    <motion.div variants={linkVars}>
+                      <Link
+                        className={cn(
+                          "space-y-6 hover:text-red-1 duration-700 transition-colors",
+                          isCurrentPath(item.link) ? "text-red-1" : "text-white"
+                        )}
+                        href={item.link}
+                      >
+                        <p className="uppercase">{item.name}</p>
+                        <div className="bg-white w-full h-px" />
+                      </Link>
+                    </motion.div>
                   ))}
                 </div>
               </div>
