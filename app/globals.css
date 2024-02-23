@@ -83,7 +83,7 @@
   
   }
   .bottombar {
-    @apply bg-red-1 z-10 w-full rounded-t-[70px] text-stone-2 ;
+    @apply bg-black w-full font-neue ;
   }
   .header{
     @apply font-neue text-black  font-normal lg:text-[64px] md:text-[36px] text-[28px]

@@ -3,67 +3,36 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <section
-      id="footer"
-      className="bottombar flex flex-col items-start lg:py-28 md:py-24 py-20 md:gap-8 gap-4 lg:px-32 md:px-20 px-16"
-    >
-      <h1 className="font-neue lg:text-[40px] md:text-[32px] text-[24px]">About Redendron Media</h1>
-      <div className="flex w-full md:flex-row justify-between gap-20 flex-col">
-        <div className="flex flex-col font-helvetica_light font-light lg:w-[40%] md:w-1/2 w-full lg:text-[24px] md:text-[16px] text-[16px] gap-y-4">
-          <p>
-            We're an agency passionate about the digital domain. Our mission is
-            to provide insights and tools that help businesses thrive.
-          </p>
-          <p>
-            This masterclass is one of the ways we support agencies on their
-            path to success.
+    <section id="footer" className="bottombar h-[50vh] items-center flex flex-col md:px-8 lg:px-16 xl:px-24">
+      <div className="bg-red-1 h-2 w-full" />
+      <div className="flex flex-col md:flex-row lg:gap-36 py-36 w-full max-w-[1440px] justify-between items-center">
+        <div className="flex flex-col items-center gap-9">
+          <div className="flex flex-row items-center gap-2">
+            <div className="relative h-20 w-20">
+              <Image
+                src={"/icons/logo1.svg"}
+                fill
+                sizes="(min-width:1024px) 79px,76px"
+                alt="logo"
+                className="object-cover"
+              />
+            </div>
+            <h4 className="font-neue text-white text-4xl">Redendron</h4>
+          </div>
+          <p className="text-xs tracking-wider uppercase font-light text-white">
+            Copyright © 2012-2023, redendron
           </p>
         </div>
-        <div className="flex flex-col  text-[16px] lg:text-[24px] md:text-[20px]  lg:w-[40%] md:w-1/2 w-full gap-y-8">
-          <div className="flex flex-row items-center font-helvetica_light font-light gap-2">
-            <Image
-              className="footer_icon"
-              src={"/icons/Internet.svg"}
-              alt={"redendron"}
-              width={62}
-              height={38}
-            />
-            <Link
-              href={"https://www.redendron.media/"}
-              className="hover:text-rose-1"
-            >
-              redendron.media
-            </Link>
-          </div>
-          <div className="flex flex-row gap-2 items-center">
-            <Image
-              className="footer_icon"
-              src={"/icons/Phone.svg"}
-              alt={"redendron"}
-              width={62}
-              height={38}
-            />
-            <p
-            >
-              +91 90645 38311
-            </p>
-          </div>
-          <div className="flex items-center flex-row gap-2">
-            <Image
-              className="footer_icon"
-              src={"/icons/Email.svg"}
-              alt={"redendron"}
-              width={62}
-              height={38}
-            />
-            <Link
-            href={`mailto:team@redendron.com`}
-            className="hover:text-rose-1"
-            >
-              team@redendron.com
-            </Link>
-          </div>
+
+        <div className="w-1/2 lg:w-2/3 xl:w-1/2 grid grid-cols-2 gap-y-8 2xl:gap-y-12 gap-x-8  lg:gap-x-20 text-xs uppercase lg:text-sm 2xl:text-lg font-light text-start tracking-wider  text-white">
+            <Link className="cursor-pointer hover:text-red-1 duration-700 transition-all text-center w-fit" href={'/'}>Blog</Link>
+            <Link className="cursor-pointer hover:text-red-1 duration-700 transition-all text-center w-fit" href={'/'}>Courses and tools</Link>
+            <Link className="cursor-pointer hover:text-red-1 duration-700 transition-all text-center w-fit" href={'/'}>work with us</Link>
+            <Link className="cursor-pointer hover:text-red-1 duration-700 transition-all text-center w-fit" href={'/'}>about us</Link>
+            <Link className="cursor-pointer hover:text-red-1 duration-700 transition-all text-center w-fit" href={'/'}>agency on notion</Link>
+            <Link className="cursor-pointer hover:text-red-1 duration-700 transition-all text-center w-fit" href={'/'}>contact us</Link>
         </div>
+
       </div>
     </section>
   );

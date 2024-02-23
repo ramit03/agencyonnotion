@@ -25,6 +25,39 @@ export const instructorLinks = [
   },
 ];
 
+export const navlinks = [
+  {
+    id:'1',
+    name:'hire us',
+    link:"/registration",
+  },
+  {
+    id:'2',
+    name:'courses and tools',
+    link:"/a",
+  },
+  {
+    id:'3',
+    name:'agency second brain',
+    link:"/a",
+  },
+  {
+    id:'4',
+    name:'blog',
+    link:"/a",
+  },
+  {
+    id:'5',
+    name:'about us',
+    link:"/a",
+  },
+  {
+    id:'6',
+    name:'contact',
+    link:"/a",
+  },
+]
+
 export const learningList = [
   {
     id: "1",
