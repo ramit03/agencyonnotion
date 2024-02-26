@@ -1,3 +1,4 @@
+import Lamp from "@/components/common/Lamp";
 import OfferingsCard from "@/components/common/OfferingsCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -20,36 +21,38 @@ function Registration() {
     <main className="w-full  bg-black text-white font-neue ">
       <section className=" w-full flex flex-col items-center justify-center">
         <div className="grid grid-cols-1 max-w-5xl">
-          <div className="py-44 px-24">
+          <div className="px-24">
             <div className="relative">
-              <h1 className=" text-7xl font-bold uppercase text-center">
-                No more band-aids on bullet wounds
-              </h1>
-              <div className="w-44 h-[120px] top-0 right-0 absolute ">
-                <Image
-                  src={"/images/bandaid.png"}
-                  width={180}
-                  height={120}
-                  alt="bandaid"
-                  sizes="(min-width:1024px) 180px,120px"
-                />
-              </div>
-              <p className=" font-light mt-10 text-3xl  text-center">
-                Most business advice online seeks to solve the symptom. We dig
-                deeper than surface-level issues to find and fix the underlying
-                problems.
-              </p>
-              <div className="flex flex-row gap-5 justify-center mt-24">
-                <Button className="bg-red-1 px-7 py-7 rounded-none  border-red-1 border-2">
-                  <p className="uppercase text-xl ">shop courses and tools</p>
-                </Button>
-                <Button
-                  variant={"secondary"}
-                  className=" px-7 py-7 rounded-none"
-                >
-                  <p className="uppercase text-xl ">Hire Us</p>
-                </Button>
-              </div>
+              <Lamp>
+                <h1 className="mt-24 text-7xl font-bold uppercase text-center">
+                  No more band-aids on bullet wounds
+                </h1>
+                <div className="w-44 h-[120px] top-24 right-0 absolute ">
+                  <Image
+                    src={"/images/bandaid.png"}
+                    width={180}
+                    height={120}
+                    alt="bandaid"
+                    sizes="(min-width:1024px) 180px,120px"
+                  />
+                </div>
+                <p className="font-light mt-10 text-2xl  text-center">
+                  Most business advice online seeks to solve the symptom. We dig
+                  deeper than surface-level issues to find and fix the
+                  underlying problems.
+                </p>
+                <div className="flex flex-row gap-5 justify-center mt-24">
+                  <Button className="bg-red-1 px-7 py-7 rounded-none  border-red-1 border-2">
+                    <p className="uppercase text-lg ">shop courses and tools</p>
+                  </Button>
+                  <Button
+                    variant={"secondary"}
+                    className=" px-7 py-7 rounded-none"
+                  >
+                    <p className="uppercase text-lg ">Hire Us</p>
+                  </Button>
+                </div>
+              </Lamp>
             </div>
           </div>
         </div>
@@ -58,35 +61,43 @@ function Registration() {
         </div>
       </section>
       <section className="w-full bg-[#181515] flex justify-center flex-col items-center  ">
-        <div className="max-w-5xl grid grid-cols-1">
+        <div className=" grid grid-cols-1 max-w-5xl ">
           <div className="py-24 px-24">
-            <h2 className="text-6xl text-center uppercase leading-[65px]">
-              Have you ever looked at your favorite Brand or creator and
-              wondered if they're just plain lucky?
-            </h2>
-            <p className="mt-12 mb-24  text-3xl text-center font-light">
-              Chances are, you've experimented with various step-by-step
-              formulas that everyone claims will eventually help you break
-              through the clutter.
-            </p>
-            <div className="w-full h-[50vh] relative">
-              <Image src={"/images/lucky.svg"} fill alt="lucky" />
+            <div className="relative">
+              <h2 className="text-6xl text-center uppercase leading-[65px]">
+                Have you ever looked at your favorite Brand or creator and
+                wondered if they're just plain lucky?
+              </h2>
+              <p className="mt-12 mb-24  text-2xl text-center font-light">
+                Chances are, you've experimented with various step-by-step
+                formulas that everyone claims will eventually help you break
+                through the clutter.
+              </p>
+              <div className="w-full h-[50vh] relative">
+                <Image src={"/images/lucky.svg"} fill alt="lucky" />
+              </div>
+              <p className="mt-24 font-light text-lg leading-8 uppercase px-14">
+                In our current economic landscape, the no.1 brand typically
+                holds about 2x the market share of the no. 2 brand, which, in
+                turn, holds about 2x the share of the no. 3 brand, and so on,
+                following a Power Law distribution.
+              </p>
+              <h3 className="text-4xl text-center mt-24">
+                The solution is differentiation, but not just any
+                differentiation — <span className="font-bold">RADICAL</span>{" "}
+                differentiation.
+              </h3>
             </div>
-            <p className="mt-24 font-light text-lg leading-8 uppercase px-14">
-              In our current economic landscape, the no.1 brand typically holds
-              about 2x the market share of the no. 2 brand, which, in turn,
-              holds about 2x the share of the no. 3 brand, and so on, following
-              a Power Law distribution.
-            </p>
-            <h3 className="text-4xl text-center mt-24">
-              The solution is differentiation, but not just any differentiation
-              — <span className="font-bold">RADICAL</span> differentiation.
-            </h3>
           </div>
+        </div>
 
-          <div className="relative w-screen max-w-5xl h-[800px]">
-            <Image src={"/images/zig.svg"} fill alt="Zig Zag" />
-          </div>
+        <div className="relative w-[99vw] h-[100vh] mb-20">
+          <Image
+            src={"/images/zig.svg"}
+            fill
+            alt="Zig Zag"
+            className="object-fill"
+          />
         </div>
       </section>
       <section className="w-full bg-gradient-to-b from-[#494A4B] via-[#0f0f10] to-black pb-24 ">
