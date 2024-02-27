@@ -19,7 +19,7 @@ function OfferingsCard({ first, title, body, onclick }: OfferingType) {
        {body}
       </p>
       <Button className="px-10 py-6 rounded-xl border-2 border-red-1 my-5 w-full hover:bg-black" onClick={onclick} >
-        <p className="text-xl">GET STARTED</p>
+        <p className="text-lg tracking-widest">GET STARTED</p>
       </Button>
     </section>
   );

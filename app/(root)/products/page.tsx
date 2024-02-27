@@ -1,3 +1,4 @@
+import ContainerScroll from "@/components/common/ContainerScroll";
 import { Button } from "@/components/ui/button";
 import React from "react";
 
@@ -8,16 +9,23 @@ function ProductPage() {
         <div className="grid grid-cols-1 max-w-5xl">
           <div className="px-24 py-36">
             <div className="relative space-y-8">
-              <div className="flex items-center gap-2">
+            
+              <ContainerScroll 
+                image="/images/agency_1.svg"
+                alt="Hero"
+                title={
+                  <>
+                    <div className="flex items-center gap-2">
                 <h5 className="uppercase font-light text-lg">
                   early bird offer
                 </h5>
                 <div className="w-[14px] h-[14px] rounded-full bg-[#e5f904]" />
               </div>
-
-              <h1 className="font-bold text-6xl uppercase">
-                build your agency second brain
-              </h1>
+                   <h1 className="font-bold text-6xl uppercase h-full text-white">build your agency second brain</h1>
+                  </>
+                }
+              />
+             
               <h5 className="uppercase font-light text-xl">
                 Enroll today for just <span className="font-bold">$117</span>
               </h5>

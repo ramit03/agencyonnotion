@@ -21,40 +21,49 @@ function Registration() {
     <main className="w-full  bg-black text-white font-neue ">
       <section className=" w-full flex flex-col items-center justify-center">
         <div className="grid grid-cols-1 max-w-5xl">
-          <div className="px-24">
-            <div className="relative">
-              <Lamp>
-                <h1 className="mt-24 text-7xl font-bold uppercase text-center">
-                  No more band-aids on bullet wounds
-                </h1>
-                <div className="w-44 h-[120px] top-24 right-0 absolute ">
-                  <Image
-                    src={"/images/bandaid.png"}
-                    width={180}
-                    height={120}
-                    alt="bandaid"
-                    sizes="(min-width:1024px) 180px,120px"
-                  />
+          <Lamp>
+            <div className="px-8 lg:px-24 pt-0 lg:pt-10">
+              <div className="relative">
+                <div className=" flex flex-col gap-0 items-center">
+                  <h1 className="mt-24 text-6xl lg:text-7xl font-bold uppercase text-center">
+                    No more band-aids
+                  </h1>
+                  <div className="relative w-full">
+                    <h1 className="mt-[1rem] text-6xl lg:text-7xl font-bold uppercase text-center">
+                      on bullet wounds
+                    </h1>
+                    <div className="w-36 h-20 lg:w-44 lg:h-[120px] top-0 right-0 absolute ">
+                      <Image
+                        src={"/images/bandaid.png"}
+                        width={180}
+                        height={120}
+                        alt="bandaid"
+                        sizes="(min-width:1024px) 180px,120px,(min-width:768px)144px,80px"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <p className="font-light mt-10 text-2xl  text-center">
+                <p className="font-light mt-7 lg:mt-10 text-xl lg:text-2xl  text-center">
                   Most business advice online seeks to solve the symptom. We dig
                   deeper than surface-level issues to find and fix the
                   underlying problems.
                 </p>
-                <div className="flex flex-row gap-5 justify-center mt-24">
+                <div className="flex flex-row gap-5 justify-center mt-14 lg:mt-24">
                   <Button className="bg-red-1 px-7 py-7 rounded-none  border-red-1 border-2">
-                    <p className="uppercase text-lg ">shop courses and tools</p>
+                    <p className="uppercase md:text-base lg:text-lg tracking-widest">
+                      shop courses and tools
+                    </p>
                   </Button>
                   <Button
                     variant={"secondary"}
-                    className=" px-7 py-7 rounded-none"
+                    className="px-7 py-7 rounded-none"
                   >
-                    <p className="uppercase text-lg ">Hire Us</p>
+                    <p className="uppercase md:text-base lg:text-lg tracking-widest">Hire Us</p>
                   </Button>
                 </div>
-              </Lamp>
+              </div>
             </div>
-          </div>
+          </Lamp>
         </div>
         <div className="w-full overflow-x-hidden">
           <div className="border-solid border-b-[#181515] border-b-[200px] border-l-transparent border-l-[100vw] border-r-transparent border-t-0" />
@@ -64,7 +73,7 @@ function Registration() {
         <div className=" grid grid-cols-1 max-w-5xl ">
           <div className="py-24 px-24">
             <div className="relative">
-              <h2 className="text-6xl text-center uppercase leading-[65px]">
+              <h2 className="md:text-[40px] md:leading-[49px] lg:text-6xl text-center uppercase lg:leading-[65px]">
                 Have you ever looked at your favorite Brand or creator and
                 wondered if they're just plain lucky?
               </h2>
@@ -125,8 +134,8 @@ function Registration() {
             collaborate, and transform your ideas into reality with the support
             of a community that understands your challenges and aspirations.
           </p>
-          <Button className="px-10 mt-5 mb-12 py-6 w-fit rounded-xl border-2 border-red-1 my-5 hover:bg-black">
-            <p className="text-xl">JOIN OUR COMMUNITY</p>
+          <Button className="px-16 mt-5 mb-12 py-6 w-fit rounded-xl border-2 border-red-1 my-5 hover:bg-black">
+            <p className="text-lg tracking-widest">JOIN OUR COMMUNITY</p>
           </Button>
           <div className="w-[170px] h-[77px] relative mx-auto">
             <Image src={"/icons/madefornotion.svg"} fill alt="madefornotion" />
