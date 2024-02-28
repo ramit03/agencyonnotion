@@ -114,3 +114,18 @@
       @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
     }
   }
+/* :root{
+  --base-font-size:1vw;
+}
+
+.dynamic-font-size {
+  font-size: calc(var(--base-font-size)+1rem);
+} */
+
+.dynamic-heading {
+  font-size: clamp(3rem,7vw,5rem);
+}
+
+.dynamic-body {
+  font-size: clamp(1.25rem,2vw,2.5rem )
+}
