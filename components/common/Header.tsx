@@ -61,7 +61,7 @@ function Header() {
 
   const Navbar: React.FC<NavbarScrollProps> = ({ toggleMenu }) => {
     return (
-      <nav className="topbar relative bg-black top-0 z-30 flex  flex-row w-full justify-between px-24 pt-20">
+      <nav className="topbar relative bg-black top-0 z-30 flex  flex-row w-full justify-between px-9 md:px-24 pt-20">
         <Link href={"/"}>
           <div className="flex flex-row items-center gap-2">
             <div className="relative h-20 w-20">
@@ -73,7 +73,7 @@ function Header() {
                 className="object-cover"
               />
             </div>
-            <h4 className="font-neue text-white text-4xl">Redendron</h4>
+            <h4 className="hidden md:flex font-neue text-white text-4xl">Redendron</h4>
           </div>
         </Link>
 

@@ -122,10 +122,84 @@
   font-size: calc(var(--base-font-size)+1rem);
 } */
 
-.dynamic-heading {
-  font-size: clamp(3rem,7vw,5rem);
+.hone {
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 89px;
 }
 
-.dynamic-body {
-  font-size: clamp(1.25rem,2vw,2.5rem )
+.htwo{
+  font-size: clamp(2rem, 7vw, 3.75rem);
+  line-height: 65px;
+}
+
+.para{
+  font-size: clamp(1rem, 7vw, 1.6rem);
+  line-height: 40px;
+}
+.buttontext{
+  font-size: clamp(0.65rem, 7vw, 1.125rem);
+  line-height: 51px;
+}
+.metatext{
+  font-size: clamp(1.124rem, 7vw, 0.75rem);
+  line-height: 32px;
+}
+.lgtext{
+  font-size: clamp(1.8rem, 7vw, 2.5rem);
+  line-height: 46px;
+}
+.metameta{
+  font-size: clamp(0.625rem, 7vw, 0.875rem);
+  line-height: 32px;
+}
+.smallpara{
+  font-size: clamp(0.875rem, 7vw,1.125rem);
+  line-height: 25px;
+}
+@media screen and (max-width: 768px) {
+  .hone {
+    line-height: 70px;
+  }
+  .htwo {
+    line-height: 55px;
+  }
+  .para{
+    line-height: 33px;
+  }
+  .buttontext{
+    line-height: 51px;
+  }
+  .metatext{
+    line-height: 32px;
+  }
+  .lgtext{
+    line-height: 46px;
+  }
+  .metameta{
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hone {
+    line-height: 52px;
+  }
+  .htwo {
+    line-height: 34px;
+  }
+  .para{
+    line-height: 30px;
+  }
+  .buttontext{
+    line-height: 51px;
+  }
+  .metatext{
+    line-height: 28px;
+  }
+  .lgtext{
+    line-height: 46px;
+  }
+  .metameta{
+    line-height: 22px;
+  }
 }
