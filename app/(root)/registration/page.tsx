@@ -22,44 +22,41 @@ function Registration() {
       <section className=" w-full flex flex-col items-center justify-center">
         <div className="grid grid-cols-1 ">
           {/* <Lamp> */}
-            <div className="px-8 lg:px-24 2xl:px-72 pt-0">
-              <div className="h-fit flex flex-col mx-auto w-fit relative gap-0 items-center">
-                <h1 className="mt-16 text-pretty md:mt-24 hone flex flex-col gap-0 leading-none  font-bold uppercase text-center">
-                  <span>No more band-aids</span>
-                  <span>on bullet wounds</span>
-                </h1>
-                <div className="bottom-16 right-6 md:bottom-4 md:-right-6 xl:bottom-4 lg:-right-8 absolute ">
-                  <div className="w-28 h-20 md:w-40 md:h-20 lg:w-44 lg:h-[120px] xl:w-52 xl:h-[150px] relative">
-                    <Image
-                      src={"/images/bandaid.png"}
-                      fill
-                      alt="bandaid"
-                      className="object-cover"
-                    />
+          <div className="px-8 lg:px-24 2xl:px-72 pt-0">
+            <div className="h-fit flex flex-col mx-auto w-fit relative gap-0 items-center">
+              <h1 className="mt-16 text-pretty md:mt-24 hone flex flex-col gap-0 leading-none  font-bold uppercase text-center">
+                <span>No more band-aids</span>
+                <div>
+                  <div className="bottom-16 right-6 md:bottom-8 md:-right-2 xl:bottom-4 lg:-right-8 absolute ">
+                    <div className="w-28 h-20 md:w-40 md:h-20 lg:w-44 lg:h-[120px] xl:w-52 xl:h-[150px] relative">
+                      <Image
+                        src={"/images/bandaid.png"}
+                        fill
+                        alt="bandaid"
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <p className="font-light mt-7 lg:mt-10 para xl:text-balance  text-center">
-                Most business advice online seeks to solve the symptom. We dig
-                deeper than surface-level issues to find and fix the underlying
-                problems.
-              </p>
-              <div className="flex flex-col md:flex-row gap-5 justify-center mt-14 lg:mt-24">
-                <Button className="bg-red-1 px-7 py-7 rounded-none  border-red-1 border-2">
-                  <p className="uppercase buttontext tracking-widest">
-                    shop courses and tools
-                  </p>
-                </Button>
-                <Button
-                  variant={"secondary"}
-                  className="px-7 py-7 rounded-none"
-                >
-                  <p className="uppercase buttontext tracking-widest">
-                    Hire Us
-                  </p>
-                </Button>
-              </div>
+                <span>on bullet wounds</span>
+              </h1>
             </div>
+            <p className="font-light mt-7 lg:mt-10 para xl:text-balance  text-center">
+              Most business advice online seeks to solve the symptom. We dig
+              deeper than surface-level issues to find and fix the underlying
+              problems.
+            </p>
+            <div className="flex flex-col md:flex-row gap-5 justify-center mt-14 lg:mt-24">
+              <Button className="bg-red-1 px-7 py-7 rounded-none  border-red-1 border-2">
+                <p className="uppercase buttontext tracking-widest">
+                  shop courses and tools
+                </p>
+              </Button>
+              <Button variant={"secondary"} className="px-7 py-7 rounded-none">
+                <p className="uppercase buttontext tracking-widest">Hire Us</p>
+              </Button>
+            </div>
+          </div>
           {/* </Lamp> */}
         </div>
         <div className="w-full  z-20 overflow-x-hidden">
@@ -68,7 +65,7 @@ function Registration() {
       </section>
       <section className="w-full bg-[#181515] flex justify-center flex-col items-center  ">
         <div className=" grid grid-cols-1 max-w-5xl ">
-          <div className="py-24 px-8 md:px-16 lg:px-24">
+          <div className="pt-24 pb-8 md:pb-12 lg:pb-24 px-8 md:px-16 lg:px-24">
             <div className="relative">
               <h2 className="htwo  text-center uppercase">
                 Have you ever looked at your favorite Brand or creator and
@@ -80,8 +77,18 @@ function Registration() {
                 through the clutter.
               </p>
               <div className="w-full h-[60svh] md:h-[50vh] relative">
-                <Image src={"/images/lucky.svg"} className="hidden md:flex" fill alt="lucky" />
-                <Image src={"/images/luckymobile.svg"} className="md:hidden object-fill" fill alt="lucky" />
+                <Image
+                  src={"/images/lucky.svg"}
+                  className="hidden md:flex"
+                  fill
+                  alt="lucky"
+                />
+                <Image
+                  src={"/images/luckymobile.svg"}
+                  className="md:hidden object-fill"
+                  fill
+                  alt="lucky"
+                />
               </div>
               <p className="mt-24 font-light  metatext uppercase lg:px-14">
                 In our current economic landscape, the no.1 brand typically
@@ -98,12 +105,12 @@ function Registration() {
           </div>
         </div>
 
-        <div className="relative w-[99vw] h-[60vh] lg:h-[100vh] mb-20">
+        <div className="relative w-[99vw] h-[50svh] md:h-[85svh] lg:h-[85vh] xl:h-[60vh] mb-20">
           <Image
-            src={"/images/zig.svg"}
+            src={"/images/zig.png"}
             fill
             alt="Zig Zag"
-            className="object-fill"
+            className=" object-cover object-bottom xl:object-contain"
           />
         </div>
       </section>
@@ -136,8 +143,18 @@ function Registration() {
             <Image src={"/icons/madefornotion.svg"} fill alt="madefornotion" />
           </div>
           <div className="w-full h-[70svh] md:h-[50vh] mt-8 relative">
-            <Image src={"/images/agency_1.svg"} className="hidden md:flex" fill alt="agency" />
-            <Image src={"/images/agency_1mobile.svg"} className="md:hidden object-contain" fill alt="agency" />
+            <Image
+              src={"/images/agency_1.svg"}
+              className="hidden md:flex"
+              fill
+              alt="agency"
+            />
+            <Image
+              src={"/images/agency_1mobile.svg"}
+              className="md:hidden object-contain"
+              fill
+              alt="agency"
+            />
           </div>
         </div>
       </section>
