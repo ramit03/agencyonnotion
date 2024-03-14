@@ -105,12 +105,12 @@ function Registration() {
           </div>
         </div>
 
-        <div className="relative w-[99vw] h-[50svh] md:h-[85svh] lg:h-[85vh] xl:h-[60vh] mb-20">
+        <div className="relative w-[99vw] pt-[56.25%]  mb-20">
           <Image
-            src={"/images/zig.png"}
+            src={"/images/zig.svg"}
             fill
             alt="Zig Zag"
-            className=" object-cover object-bottom xl:object-contain"
+            className=" "
           />
         </div>
       </section>
