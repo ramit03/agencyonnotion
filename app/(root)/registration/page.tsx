@@ -59,7 +59,7 @@ function Registration() {
           </div>
           {/* </Lamp> */}
         </div>
-        <div className="w-full  z-20 overflow-x-hidden">
+        <div className="w-full mt-10 z-20 overflow-x-hidden">
           <div className="border-solid border-b-[#181515] border-b-[200px] border-l-transparent border-l-[100vw] border-r-transparent border-t-0" />
         </div>
       </section>
