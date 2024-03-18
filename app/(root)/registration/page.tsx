@@ -25,7 +25,7 @@ function Registration() {
           <div className="px-8 lg:px-24 2xl:px-72 pt-0">
             <div className="h-fit flex flex-col mx-auto w-fit relative gap-0 items-center">
               <h1 className="mt-16 text-pretty md:mt-24 hone flex flex-col gap-0 leading-none  font-bold uppercase text-center">
-                <span>No more band-aids</span>
+                <span className="leading-none">No more band-aids</span>
                 <div>
                   <div className="bottom-16 right-6 md:bottom-8 md:-right-2 xl:bottom-4 lg:-right-8 absolute ">
                     <div className="w-28 h-20 md:w-40 md:h-20 lg:w-44 lg:h-[120px] xl:w-52 xl:h-[150px] relative">
@@ -47,7 +47,7 @@ function Registration() {
               problems.
             </p>
             <div className="flex flex-col md:flex-row gap-5 justify-center mt-14 lg:mt-24">
-              <Button className="bg-red-1 px-7 py-7 rounded-none  border-red-1 border-2">
+              <Button className="bg-red-1  px-0 md:px-7 py-7 rounded-none  border-red-1 border-2">
                 <p className="uppercase buttontext tracking-widest">
                   shop courses and tools
                 </p>
@@ -110,7 +110,7 @@ function Registration() {
             src={"/images/zig.svg"}
             fill
             alt="Zig Zag"
-            className=" "
+            className=""
           />
         </div>
       </section>
@@ -136,7 +136,7 @@ function Registration() {
             collaborate, and transform your ideas into reality with the support
             of a community that understands your challenges and aspirations.
           </p>
-          <Button className="px-12 md:px-16 mt-5 mb-12 py-6 w-fit rounded-xl border-2 border-red-1 my-5 hover:bg-black">
+          <Button className="px-0 md:px-16 mt-5 mb-12 py-6 w-[80vw] md:w-fit rounded-xl border-2 border-red-1 my-5 hover:bg-black">
             <p className="buttontext tracking-widest">JOIN OUR COMMUNITY</p>
           </Button>
           <div className="w-[170px] h-[77px] relative mx-auto">

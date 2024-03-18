@@ -137,7 +137,7 @@
   line-height: 40px;
 }
 .buttontext{
-  font-size: clamp(0.65rem, 7vw, 1.125rem);
+  font-size: clamp(0.5rem, 7vw, 1.125rem);
   line-height: 51px;
 }
 .metatext{
