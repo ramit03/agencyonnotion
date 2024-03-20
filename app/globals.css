@@ -123,37 +123,37 @@
 } */
 
 .hone {
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size: clamp(3.4375rem, 2.9592rem + 2.0408vw, 5rem);
   line-height: 89px;
 }
 
 .htwo{
-  font-size: clamp(2rem, 7vw, 3.75rem);
+  font-size: clamp(2rem, 1.4643rem + 2.2857vw, 3.75rem);
   line-height: 65px;
 }
 
 .para{
-  font-size: clamp(1rem, 7vw, 1.6rem);
+  font-size: clamp(1rem, 0.7321rem + 1.1429vw, 1.875rem);
   line-height: 40px;
 }
 .buttontext{
-  font-size: clamp(0.5rem, 7vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.7602rem + 0.4898vw, 1.25rem);
   line-height: 51px;
 }
 .metatext{
-  font-size: clamp(1.124rem, 7vw, 0.75rem);
+  font-size: clamp(0.75rem, 0.6352rem + 0.4898vw, 1.125rem);
   line-height: 32px;
 }
 .lgtext{
-  font-size: clamp(1.8rem, 7vw, 2.5rem);
+  font-size: clamp(1.8rem, 1.5857rem + 0.9143vw, 2.5rem);
   line-height: 46px;
 }
 .metameta{
-  font-size: clamp(0.625rem, 7vw, 0.875rem);
+  font-size: clamp(0.625rem, 0.5485rem + 0.3265vw, 0.875rem);
   line-height: 32px;
 }
 .smallpara{
-  font-size: clamp(0.875rem, 7vw,1.125rem);
+  font-size: clamp(0.875rem, 0.7985rem + 0.3265vw, 1.125rem);
   line-height: 25px;
 }
 @media screen and (max-width: 768px) {

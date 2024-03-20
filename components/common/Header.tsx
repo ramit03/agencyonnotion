@@ -102,7 +102,7 @@ function Header() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="fixed left-0 top-0  z-50 h-screen w-full origin-top bg-black px-24 py-20"
+            className="fixed left-0 top-0  z-50 h-screen w-full origin-top bg-black px-8 md:px-24 py-20"
           >
             <div className="w-full relative h-full">
               <motion.div variants={linkVars} className="relative">
@@ -120,10 +120,10 @@ function Header() {
                 </Button>
               </motion.div>
 
-              <div className="flex flex-row justify-between h-full">
+              <div className="flex flex-col-reverse lg:flex-row justify-between h-full">
                 <motion.div
                   variants={linkVars}
-                  className="flex flex-row self-end items-center gap-2"
+                  className="flex flex-row lg:self-end items-center gap-2"
                 >
                   <div className="relative h-20 w-20">
                     <Image
@@ -136,10 +136,11 @@ function Header() {
                   </div>
                   <h4 className="font-neue text-white text-4xl">Redendron</h4>
                 </motion.div>
-                <div className="w-1/2 text-white font-neue text-[36px] 2xl:text-5xl pt-32 flex flex-col justify-end gap-3 2xl:gap-14">
+                <div className="lg:w-1/2 text-white font-neue text-[36px] 2xl:text-5xl pt-32 flex flex-col justify-end gap-3 2xl:gap-14">
                   {navlinks.map((item) => (
                     <motion.div variants={linkVars}>
                       <Link
+                        onClick={toggleMenu}
                         className={cn(
                           "space-y-6 hover:text-red-1 duration-700 transition-colors",
                           isCurrentPath(item.link) ? "text-red-1" : "text-white"

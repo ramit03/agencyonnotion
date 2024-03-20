@@ -1,9 +1,10 @@
+"use client";
 import Lamp from "@/components/common/Lamp";
 import OfferingsCard from "@/components/common/OfferingsCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
-
+import { motion } from "framer-motion";
 function Registration() {
   const data = [
     {
@@ -60,7 +61,7 @@ function Registration() {
           {/* </Lamp> */}
         </div>
         <div className="w-full mt-10 z-20 overflow-x-hidden">
-          <div className="border-solid border-b-[#181515] border-b-[200px] border-l-transparent border-l-[100vw] border-r-transparent border-t-0" />
+          <div className="border-solid border-b-[#181515] border-b-[100px] md:border-b-[200px] border-l-transparent border-l-[100vw] border-r-transparent border-t-0" />
         </div>
       </section>
       <section className="w-full bg-[#181515] flex justify-center flex-col items-center  ">
@@ -76,6 +77,17 @@ function Registration() {
                 formulas that everyone claims will eventually help you break
                 through the clutter.
               </p>
+              <div className="w-full">
+                {/* <motion.div
+                  whileHover={{ rotate: 3600,}}
+                  transition= {{ duration: 20, loop: Infinity, ease: "linear" }}
+                
+                  className="flex flex-row size-40 items-center border-white-1 border-2 rounded-full"
+                >
+                  <div className="size-20 border-white-1 border-2 rounded-full" />
+                  <div className="size-20 border-white-1 border-2 rounded-full" />
+                </motion.div> */}
+              </div>
               <div className="w-full h-[60svh] md:h-[50vh] relative">
                 <Image
                   src={"/images/lucky.svg"}
@@ -106,17 +118,12 @@ function Registration() {
         </div>
 
         <div className="relative w-[99vw] pt-[56.25%]  mb-20">
-          <Image
-            src={"/images/zig.svg"}
-            fill
-            alt="Zig Zag"
-            className=""
-          />
+          <Image src={"/images/zig.svg"} fill alt="Zig Zag" className="" />
         </div>
       </section>
       <section className="w-full bg-gradient-to-b from-[#494A4B] via-[#0f0f10] to-black pb-24 ">
         <div className=" mb-24 overflow-hidden">
-          <div className="border-solid border-t-[#181515] border-t-[200px] border-l-transparent border-l-[100vw] border-r-transparent border-b-0"></div>
+          <div className="border-solid border-t-[#181515] border-t-[100px] md:border-t-[200px] border-l-transparent border-l-[100vw] border-r-transparent border-b-0"></div>
         </div>
         <div className="mx-auto max-w-5xl mb-44 lg:mb-40">
           <h2 className="uppercase text-center mb-14 htwo">our offerings</h2>
