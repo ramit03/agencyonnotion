@@ -64,7 +64,7 @@ function Header() {
       <nav className="topbar relative bg-black top-0 z-30 flex  flex-row w-full justify-between px-9 md:px-24 pt-12 md:pt-20">
         <Link href={"/"}>
           <div className="flex flex-row items-center gap-2">
-            <div className="relative h-20 w-20">
+            <div className="relative size-16 md:size-20">
               <Image
                 src={"/icons/logo1.svg"}
                 fill
@@ -125,7 +125,7 @@ function Header() {
                   variants={linkVars}
                   className="flex flex-row lg:self-end items-center gap-2"
                 >
-                  <div className="relative h-20 w-20">
+                  <div className="relative size-16 md:size-20">
                     <Image
                       src={"/icons/logo1.svg"}
                       fill
@@ -136,7 +136,7 @@ function Header() {
                   </div>
                   <h4 className="font-neue text-white text-4xl">Redendron</h4>
                 </motion.div>
-                <div className="lg:w-1/2 text-white font-neue text-[36px] 2xl:text-5xl pt-32 flex flex-col justify-end gap-3 2xl:gap-14">
+                <div className="lg:w-1/2 text-white font-neue lgtext pt-32 flex flex-col justify-end gap-10 2xl:gap-14">
                   {navlinks.map((item) => (
                     <motion.div variants={linkVars}>
                       <Link

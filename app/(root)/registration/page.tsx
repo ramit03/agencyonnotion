@@ -28,7 +28,7 @@ function Registration() {
               <h1 className="mt-16 text-pretty md:mt-24 hone flex flex-col gap-0 leading-none  font-bold uppercase text-center">
                 <span className="leading-none">No more band-aids</span>
                 <div>
-                  <div className="bottom-16 right-6 md:bottom-8 md:-right-2 xl:bottom-4 lg:-right-8 absolute ">
+                  <div className="bottom-16 right-4 md:bottom-8 md:-right-2 xl:bottom-4 lg:-right-8 absolute ">
                     <div className="w-28 h-20 md:w-40 md:h-20 lg:w-44 lg:h-[120px] xl:w-52 xl:h-[150px] relative">
                       <Image
                         src={"/images/bandaid.png"}
@@ -78,7 +78,7 @@ function Registration() {
                 through the clutter.
               </p>
               <div className="w-full">
-                {/* <motion.div
+                <motion.div
                   whileHover={{ rotate: 3600,}}
                   transition= {{ duration: 20, loop: Infinity, ease: "linear" }}
                 
@@ -86,7 +86,7 @@ function Registration() {
                 >
                   <div className="size-20 border-white-1 border-2 rounded-full" />
                   <div className="size-20 border-white-1 border-2 rounded-full" />
-                </motion.div> */}
+                </motion.div>
               </div>
               <div className="w-full h-[60svh] md:h-[50vh] relative">
                 <Image
